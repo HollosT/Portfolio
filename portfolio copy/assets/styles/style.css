@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primarly: #F5ECEC;
+    --secondary: #F5F2F2;
+    --main-suplemetar: #588EAD;
+    --light-suplementar: #BBD2E0;
+    --secondary-suplementar: #5C4C4C;
+    --third-suplementar: #CEA9A9;
+    --white: white;
+}
+
+i {
+    color: var(--main-suplemetar);
+    font-family: fontawesome;
+    font-style: normal;
+    font-size: 7vw;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 4vw;
+}
+
+h1, h2, h3, h4, h5, h6, h7, p {
+    color: var(--secondary-suplementar);
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 11vw;
+
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 5vw;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 4.5vw;
+}
+
+h4 {
+    font-weight: 900;
+    font-size: 4.5vw;
+}
+
+p {
+    /* line-height: 3.5vh; */
+    font-size: 4vw;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.center_text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    background-color: var(--main-suplemetar);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    box-shadow: rgba(127, 175, 222, 0.818) 1px 2px 25px -1px;
+    font-weight: 400;
+}
+
+
+/* ********************************************** */
+/* Home mobile */
+
+/* Home navigation */
+.desktop_nav {
+    display: none;
+}
+
+.mobile_nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5vw;
+    background-color: var(--secondary);
+}
+
+.mobile_nav i {
+    color: var(--secondary-suplementar);
+    font-size: 8vw;
+}
+
+.logo {
+    color: var(--secondary-suplementar);
+    font-weight: 900;
+    font-size: 7vw;
+}
+
+/* Home hero section */
+.hero_section {
+    background-color: var(--secondary);
+    padding-top: 8vw;
+    padding-bottom: 8vh;
+    position: relative;
+}
+
+
+.hero_section h2 span {
+    color: var(--main-suplemetar);
+    font-size: 4.5vw;
+}
+
+.home_location-job {
+    position: relative;
+    margin-top: 4vh;
+}
+
+.home_location-job>div {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    z-index: 100;
+}
+
+.home_location-job div div {
+    gap: 4vw;
+    margin-bottom: 4vw;
+}
+
+.home_location-job img {
+    width: 45%;
+    height: 35%;
+    transform: translateX(121%);
+    -webkit-transform: translateX(121%);
+    -moz-transform: translateX(121%);
+    -ms-transform: translateX(121%);
+    -o-transform: translateX(121%);
+}
+
+.home_location-job .home_hero-morebtn {
+    border-bottom: .5px solid var(--main-suplemetar);
+    width: max-content;
+    position: absolute;
+    top: 75%;
+}
+
+.home_hero-morebtn a {
+    color: var(--main-suplemetar);
+    font-size: 4vw;
+    font-weight: 200;
+}
+
+.home_hero-morebtn i {
+    font-size: 4vw;
+}
+
+/* Mobile hero section bottom SVG */
+
+.hero_mobile--figure {
+    width: 100vw;
+    height: 62vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.hero_mobile--figure .cls-1 {
+    fill: var(--primarly);
+}
+
+.hero_mobile--figure .cls-2 {
+    fill: var(--white);
+}
+.hero_mobile--figure .cls-3 {
+    filter: url(#Path_50);
+  }
+
+/* ************************************** */
+/* Home mobile What I do section */
+.introduction {
+    background-color: var(--primarly);
+    padding: 15vw 0;
+}
+
+.text_box {
+    background-color: var(--white);
+    flex-direction: column;
+    padding: 6vw;
+    margin-bottom: 6vh;
+}
+
+
+.text_box div {
+    margin: 7vw 0;
+}
+
+.text_box div p {
+   text-align: left;
+}
+
+.text_box .btn {
+    padding: 2.5vw 4.5vw;
+}
+
+/* First text box */
+.text_box--1 {
+    position: relative;
+    padding-bottom: 8vh;
+}
+
+/* Second text box */
+
+
+/* I do front end development section */
+
+.home_introduction-titletriangle--1 {
+    position: relative;
+}
+
+.home_introduction-titletriangle--1 h4 {
+    position: relative;
+    z-index: 1;
+}
+
+#home_introduction-triangle--1 {
+    position: absolute;
+    width: 35vw;
+    left: 15%;
+    top: -25%;
+    z-index: 0;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+
+
+#home_introduction-triangle--1 > .cls-1 {
+    fill: var(--light-suplementar);
+}
+/* Introduction svgs */
+/* Common attributes*/
+.home_introduction-figure {
+    width: 100vw;
+}
+.home_introduction-figure .cls-1 {
+    fill: var(--third-suplementar);
+}
+
+.home_introduction-figure .cls-2 {
+    fill: var(--white);
+}
+.home_introduction-figure .cls-3 {
+    filter: url(#Path_26);
+}
+
+/* Introduction first SVG */
+.home_introduction-figure--1 {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Introduction second SVG */
+.home_introduction-figure--2 {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
