@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="177" height="206" viewBox="0 0 177 206">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cea9a9;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        filter: url(#Path_28);
+      }
+    </style>
+    <filter id="Path_28">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <path id="Path_28-2" data-name="Path 28" class="cls-1" d="M0,0H177L45.539,12.688,0,206Z"/>
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="Path_28-3" data-name="Path 28" class="cls-2" d="M0,0H177L45.539,12.688,0,206Z"/>
+    </g>
+  </g>
+</svg>
