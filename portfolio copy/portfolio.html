@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <nav class="desktop_nav">
+        <nav class="desktop_nav portfolio_desktop-nav">
             <a href="index.html" class="logo">Tamás Hollós</a>
             <ul lass="desktop_nav--items">
                 <li><a href="#">Portfolio</a></li>
@@ -40,6 +40,25 @@
     </header>
     <main>
         <section class="hero_section portfolio_hero">
+            <svg class="portfolio_hero-figure--desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="492" viewBox="0 0 1920 492">
+                <defs>
+                  <filter id="Path_18" x="0" y="0" width="1920" height="492" filterUnits="userSpaceOnUse">
+                    <feOffset dy="5" input="SourceAlpha"/>
+                    <feGaussianBlur stdDeviation="8" result="blur"/>
+                    <feFlood flood-color="#9a3434" flood-opacity="0.161" result="color"/>
+                    <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+                    <feComposite operator="in" in="color"/>
+                    <feComposite operator="in" in2="SourceGraphic"/>
+                  </filter>
+                </defs>
+                <g data-type="innerShadowGroup">
+                  <path id="Path_18-2" data-name="Path 18" class="cls-1" d="M0,0,18.211,473.584,262.64,484.016l1529.767-31.463,101.454-3L1920,0V492H0Z" transform="translate(1920 492) rotate(180)"/>
+                  <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+                    <path id="Path_18-3" data-name="Path 18" class="cls-2" d="M0,0,18.211,473.584,262.64,484.016l1529.767-31.463,101.454-3L1920,0V492H0Z" transform="translate(1920 492) rotate(180)"/>
+                  </g>
+                </g>
+              </svg>
+              
             <div class="hero_title center_text flex">
                     <h1>Portfolio</h1>
                     <svg class="home_hero-figure--desktop" xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +97,7 @@
                   </g>
                 </g>
             </svg>
-              
+            
         </section>
         <section class="introduction portfolio_introduction">
             <div class="text_box flex center_text text_box--1">
@@ -91,14 +110,28 @@
                     </svg>
                 </div>
                 <div class="introduction_imgcontainer">
-                    <img class="introduction_gjoelkro-img--desktop" src="assets/img/gjoelkro_home--desktop.png" alt="Gjoel Kro desktop home page | Restaurant">
-                    <img class="introduction_gjoelkro-img--mobile" src="assets/img/gjoelkro_home--mobile.png" alt="Gjoel Kro mobile home page | Restaurant">
+                    <img class="introduction_gjoelkro-img--desktop introduction_desktop-img" src="assets/img/gjoelkro_home--desktop.png" alt="Gjoel Kro desktop home page | Restaurant">
+                    <img class="introduction_gjoelkro-img--mobile introduction_mobile-img" src="assets/img/gjoelkro_home--mobile.png" alt="Gjoel Kro mobile home page | Restaurant">
                 </div>
-                <ul>
-                    <li>Full design process</li>
-                    <li>Focusing on research and UX</li>
-                </ul>
-                <btn href="#" class="btn">Read more</btn>
+                <div class="portfolio_introduction-list">
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-lightbulb"></i>
+                            <p> Full design process</p>
+                        </li>
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <p>Focusing on research and UX</p>
+                        </li>
+                    </ul>
+                </div>
+                <btn href="#" class="btn portfolio_introduction-btn flex">
+                    <p>Read more</p>  
+                    <svg class="portfolio_introduction-readBtn--triangle" xmlns="http://www.w3.org/2000/svg" width="27" height="14" viewBox="0 0 27 14">
+                        <path id="Polygon_12" data-name="Polygon 12" class="cls-1" d="M13.5,0,27,14H0Z" transform="translate(27 14) rotate(180)"/>
+                    </svg>
+                </btn>
+                <div class="portfolio_introduction-caseContainer"></div>
                 <svg class="introduction-figure introduction-figure--1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 447 118.22">
                     <defs>
@@ -152,14 +185,27 @@
                     </svg>
                 </div>
                 <div class="introduction_imgcontainer">
-                    <img class="introduction_kulia-img--mobile" src="assets/img/kulia_home--mobile.png" alt="Kulia mobile home page | Food truck">
-                    <img class="introduction_kulia-img--mobile-2" src="assets/img/kulia_home-2--mobile.png" alt="Kulia desktop home page | Food truck">
+                    <img class="introduction_kulia-img--desktop introduction_desktop-img" src="assets/img/kulia_home--desktop.png" alt="Kulia mobile home page | Food truck">
+                    <img class="introduction_kulia-img--mobile introduction_mobile-img" src="assets/img/kulia_home--mobile.png" alt="Kulia mobile home page | Food truck">
+                    <img class="introduction_kulia-img--mobile-2 introduction_mobile-img" src="assets/img/kulia_home-2--mobile.png" alt="Kulia desktop home page | Food truck">
                 </div>
-                <ul>
-                    <li>Full design process</li>
-                    <li>Mobile first approach</li>
+                <ul class="portfolio_introduction-list">
+                    <li>
+                        <i class="fa-regular fa-lightbulb"></i>
+                        <p>Full design process</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mobile"></i>
+                        <p>Mobile first approach</p>
+                    </li>
                 </ul>
-                <btn href="#" class="btn">Read more</btn>
+                <btn href="#" class="btn portfolio_introduction-btn flex">
+                    <p>Read more</p>  
+                    <svg class="portfolio_introduction-readBtn--triangle" xmlns="http://www.w3.org/2000/svg" width="27" height="14" viewBox="0 0 27 14">
+                        <path id="Polygon_12" data-name="Polygon 12" class="cls-1" d="M13.5,0,27,14H0Z" transform="translate(27 14) rotate(180)"/>
+                    </svg>
+                </btn>
+                <div class="portfolio_introduction-caseContainer"></div>
             </div>
             <div class="top_btn">
                 <svg class="top_btn--figure" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="109" height="86" viewBox="0 0 109 86">

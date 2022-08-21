@@ -27,6 +27,7 @@ i {
 }
 
 li {
+    font-size: 4vw;
     text-decoration: none;
     list-style: none;
 }
@@ -67,12 +68,6 @@ p {
     line-height: 7.5vw;
 }
 
-li {
-    font-size: 4vw;
-    line-height: 7.5vw;
-}
-
-
 
 .flex {
     display: flex;
@@ -97,7 +92,11 @@ li {
     -o-border-radius: .5rem;
     box-shadow: rgba(127, 175, 222, 0.818) 1px 2px 25px -1px;
     font-weight: 400;
+}
+
+.btn > p {
     color: var(--white);
+    font-size: 4vw;
 }
 
 
@@ -157,7 +156,7 @@ footer {
 
 /* Home hero section */
 .home_desktop--figure, .business_value-figure--desktop-1,
-.business_value-figure--desktop-2, .business_value-triangle--2 {
+.business_value-figure--desktop-2, .business_value-triangle--2, .portfolio_hero-figure--desktop {
     display: none;
 }
 .hero_section {
@@ -448,7 +447,7 @@ footer a {
 }
 
 .portfolio_hero h1 {
-    /* position: absolute; */
+    margin-left: 0;
     z-index: 1;
 }
 .portfolio_hero .home_hero-figure--desktop {
@@ -469,7 +468,7 @@ footer a {
     padding-top: 25vw;
 }
 
-.portfolio_introduction .introduction_gjoelkro-img--mobile {
+.portfolio_introduction .introduction_gjoelkro-img--mobile, .introduction_kulia-img--desktop {
     display: none;
 }
 
@@ -480,12 +479,27 @@ footer a {
 
 }
 .portfolio_introduction .text_box ul li {
-    list-style: disc;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+.portfolio_introduction .text_box ul li i {
+    font-size: 4vw;
 }
 
 .portfolio_introduction .text_box .btn {
-    margin: 10vw;
+    margin-top: 10vw;
+    align-items: center;
+    gap: 2vw;
 }
+
+.portfolio_introduction-readBtn--triangle {
+    width: 4vw;
+}
+
+.portfolio_introduction-readBtn--triangle .cls-1 {
+    fill: var(--white);
+  }
 
 /* Portfolio mobile 1 text box */
 .portfolio_introduction .text_box--1 .introduction_gjoelkro-img--desktop {
@@ -563,7 +577,17 @@ footer a {
     }
 
     .text_box .btn {
-        padding: .8vw 1.5vw;
+        padding: .5vw 1vw;
+        font-size: 1vw;
+    }
+
+    .btn > p {
+        color: var(--white);
+        font-size: 1vw;
+    }
+
+    ul li {
+        font-size: 1vw;
     }
 
 
@@ -894,6 +918,185 @@ footer a {
     footer {
         padding: 2vw;
         gap: 1vw;
+    }
+
+
+    /* **************** */
+    /* Portfolio desktop  */
+    
+    /* Portfolio desktop  Nav */
+    .portfolio_desktop-nav {
+        background-color: var(--primarly);
+        padding-bottom: 2vw;
+    }
+    
+    /*Portfolio hero section */
+    .portfolio_hero {
+        background-color: var(--secondary);
+        display: grid;
+        grid-template-areas: 
+        ". ."
+        "h1 ."
+        ;
+        position: relative;
+        padding-bottom: 11vw;
+        
+    }
+
+    .portfolio_hero .hero_title {
+        grid-area: h1;
+    }
+
+
+    /* Portfolio hero svg */
+    .portfolio_hero-figure--mobile {
+        display: none;
+    }
+    
+    .portfolio_hero-figure--desktop {
+        display: block;
+        width: 100vw;
+        height: 26vw;
+        position: absolute;
+        top: 0;
+    }
+    .portfolio_hero-figure--desktop .cls-1 {
+        fill: var(--primarly);
+    }
+    .portfolio_hero-figure--desktop .cls-2 {
+        fill: var(--white);
+    }
+    .portfolio_hero-figure--desktop .cls-3 {
+        filter: url(#Path_18);
+    }
+
+    .portfolio_hero > div {
+        padding: 0vw;
+        margin: 3vw;
+    }
+
+    .portfolio_hero .home_hero-figure--desktop {
+        width: 20vw;
+    }
+
+     /*Portfolio introduction section */
+     .portfolio_introduction {
+        display: block;
+        position: relative;
+        padding-top: 0vw;
+     }
+
+     .portfolio_introduction .text_box {
+         width:unset;
+         height:unset;
+    }
+
+    /* Portfolio introduction text boxes */
+    .portfolio_introduction .text_box div {
+        margin: 1vw;
+    }
+    .portfolio_introduction .text_box {
+        display: grid;
+        grid-template-areas: 
+        "title image"
+        "list image"
+        "btn ."
+        "case case"
+        ;
+        column-gap: 10vw;
+        row-gap: 2vw;
+        margin: 0 10vw 5vw 10vw;
+        padding-bottom: 1vw;
+    }
+
+    .introduction-titletriangle {
+        grid-area: title;
+    }
+
+    .introduction_imgcontainer {
+        grid-area: image;
+        
+    }
+
+    .portfolio_introduction-list {
+        grid-area: list;
+    }
+
+    .portfolio_introduction-btn {
+        grid-area: btn;
+        justify-self: center;
+    }
+
+    .portfolio_introduction-caseContainer {
+        grid-area: case;
+    }
+
+    .portfolio_introduction .text_box--1 {
+        background-color: var(--primarly);
+    }
+
+    .portfolio_introduction .text_box ul li {
+        display: flex;
+        gap: 1vw;
+    }
+    .portfolio_introduction .text_box ul li i {
+        font-size: 1.5vw;
+    }
+
+     /* Portfolio introduction text boxes Images */
+     .portfolio_introduction .introduction_gjoelkro-img--mobile {
+        display: block;
+    }
+    .portfolio_introduction .text_box .introduction_imgcontainer .introduction_desktop-img {
+        width: 30vw;
+        height: 15vw;
+    }
+
+    .portfolio_introduction .introduction_kulia-img--desktop {
+        display: block;
+    }
+
+    .portfolio_introduction .introduction_kulia-img--mobile-2 {
+        display: none;
+    }
+
+    .portfolio_introduction .text_box--2 .introduction_imgcontainer .introduction_kulia-img--mobile {
+        margin-right: 0;
+    }
+
+    .portfolio_introduction .text_box .introduction_imgcontainer .introduction_desktop-img {
+        position: relative;
+    }
+    .portfolio_introduction .text_box .introduction_imgcontainer .introduction_mobile-img {
+        position: absolute;
+        transform: rotate(8deg);
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        width: 8vw;
+        height: 15vw;
+        bottom: 25%;
+        left: 78%;
+}
+
+    /* Portfolio introduction text boxes SVG */
+    .portfolio_introduction .text_box--1 #introduction-triangle--1 {
+        left: 5%;
+    }
+    .portfolio_introduction .text_box--2 #introduction-triangle--1 {
+        left: 0;
+    }
+
+    /* Portfolio introduction text boxes BTN*/
+    .portfolio_introduction .text_box .btn {
+        margin-top: 0vw;
+        width: fit-content;
+        gap: .5vw;
+    }
+
+    .portfolio_introduction-readBtn--triangle {
+        width: 1.5vw;
     }
 
 }
