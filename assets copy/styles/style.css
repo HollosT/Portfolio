@@ -14,6 +14,7 @@
     --secondary: #F5F2F2;
     --main-suplemetar: #588EAD;
     --light-suplementar: #BBD2E0;
+    --btn-unactive: #85bee2;
     --secondary-suplementar: #5C4C4C;
     --third-suplementar: #CEA9A9;
     --white: white;
@@ -84,7 +85,7 @@ p {
 }
 
 .btn {
-    background-color: var(--main-suplemetar);
+    background-color: var(--btn-unactive);
     border-radius: .5rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;
@@ -95,7 +96,7 @@ p {
 }
 
 .btn > p {
-    color: var(--white);
+    color: var(--secondary);
     font-size: 4vw;
 }
 
@@ -476,7 +477,6 @@ footer a {
 .portfolio_introduction .text_box {
     padding-bottom: 0;
     background-color: var(--white);
-
 }
 .portfolio_introduction .text_box ul li {
     display: flex;
@@ -498,7 +498,7 @@ footer a {
 }
 
 .portfolio_introduction-readBtn--triangle .cls-1 {
-    fill: var(--white);
+    fill: var(--secondary);
   }
 
 /* Portfolio mobile 1 text box */
@@ -566,9 +566,14 @@ footer a {
     h4 {
         font-size: 1.5vw;
     }
+    
+    h5 {
+        font-size: 1.2vw;
+
+    }
 
     p {
-        line-height: 2vw;
+        line-height: 1.8vw;
         font-size: 1vw;
     }
 
@@ -746,7 +751,7 @@ footer a {
     .home_desktop--figure {
         display: block;
         width: 100vw;
-        height: 53vw;
+        height: 52.5vw;
         position: absolute;
         bottom: 0;
     }
@@ -992,21 +997,20 @@ footer a {
     }
 
     /* Portfolio introduction text boxes */
-    .portfolio_introduction .text_box div {
-        margin: 1vw;
-    }
     .portfolio_introduction .text_box {
+        margin: 0 10vw 5vw 10vw;
+    }
+    .portfolio_introduction .text_box .text_box-introduction {
         display: grid;
         grid-template-areas: 
         "title image"
         "list image"
         "btn ."
-        "case case"
         ;
         column-gap: 10vw;
         row-gap: 2vw;
-        margin: 0 10vw 5vw 10vw;
-        padding-bottom: 1vw;
+        
+        /* padding-bottom: 5vw; */
     }
 
     .introduction-titletriangle {
@@ -1015,7 +1019,7 @@ footer a {
 
     .introduction_imgcontainer {
         grid-area: image;
-        
+        position: relative;
     }
 
     .portfolio_introduction-list {
@@ -1024,10 +1028,11 @@ footer a {
 
     .portfolio_introduction-btn {
         grid-area: btn;
-        justify-self: center;
+        justify-self: flex-start;
+        margin-left: 2vw;
     }
 
-    .portfolio_introduction-caseContainer {
+    .cases {
         grid-area: case;
     }
 
@@ -1038,6 +1043,7 @@ footer a {
     .portfolio_introduction .text_box ul li {
         display: flex;
         gap: 1vw;
+        padding-bottom: 1vw;
     }
     .portfolio_introduction .text_box ul li i {
         font-size: 1.5vw;
@@ -1065,7 +1071,7 @@ footer a {
     }
 
     .portfolio_introduction .text_box .introduction_imgcontainer .introduction_desktop-img {
-        position: relative;
+
     }
     .portfolio_introduction .text_box .introduction_imgcontainer .introduction_mobile-img {
         position: absolute;
@@ -1076,7 +1082,7 @@ footer a {
         -o-transform: rotate(8deg);
         width: 8vw;
         height: 15vw;
-        bottom: 25%;
+        top: 30%;
         left: 78%;
 }
 
@@ -1087,16 +1093,118 @@ footer a {
     .portfolio_introduction .text_box--2 #introduction-triangle--1 {
         left: 0;
     }
-
+    .portfolio_introduction .introduction-figure--1 {
+        display: none;
+    }
     /* Portfolio introduction text boxes BTN*/
     .portfolio_introduction .text_box .btn {
         margin-top: 0vw;
-        width: fit-content;
-        gap: .5vw;
+        margin-bottom: 3vw;
+    }
+    
+    .portfolio_introduction .text_box .portfolio_introduction-btn:hover {
+        animation: color .5s ease-in forwards;
+        cursor: pointer;
+        -webkit-animation: color .5s ease-in forwards;
+    }
+
+
+    @keyframes color {
+        0% {
+            background-color: var(--btn-unactive);
+        }
+
+        100% {
+            background-color: var(--main-suplemetar);
+        }
     }
 
     .portfolio_introduction-readBtn--triangle {
         width: 1.5vw;
+        /* width: unset; */
     }
 
+    /* ******************************************** */
+    /* Portfolio CASES */
+    .cases-container {
+        background-color: var(--white);
+    }
+    .cases-container div {
+        margin: -2vw 2vw 2vw;
+    }
+    .cases_tab-container {
+        display: flex;
+        gap: 3vw;
+        position: relative;
+        padding-bottom: 6vw;
+    }
+    .cases_tab-container .cases_btn::after {
+        position: absolute;
+}
+
+
+    .cases {
+        display: grid;
+        grid-template-areas: "content image" ;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2vw;
+    }
+    /* .cases > * {
+        animation: overlay 2s ease-in forwards;
+        -webkit-animation: overlay 2s ease-in forwards;
+    }
+
+    @keyframes overlay  {
+        0% {
+            display: none;
+        }
+        100% {
+            display: none;
+        }
+    } */
+
+        
+
+    .cases_image-container {
+        grid-area: image;
+    }
+    .cases_image-container img {
+        width: 30vw;
+        height: auto;
+    }
+
+    .cases_content {
+        grid-area: content;
+    }
+
+    .cases_content p {
+        margin-bottom: 2vw;
+    }
+
+   .cases_btn {
+        padding: 1vw 1vw;
+        font-size: 1.2vw;
+        box-shadow: rgba(211, 158, 144, 0.858) 1px 2px 5px -1px;
+        background-color: var(--third-suplementar);
+        border: none;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+        color: var(--secondary);
+        
+    }
+
+    .cases_btn--active {
+        transform: translateY(-20%) scale(1.1);
+        -webkit-transform: translateY(-20%) scale(1.1);
+        -moz-transform: translateY(-20%) scale(1.1);
+        -ms-transform: translateY(-20%) scale(1.1);
+        -o-transform: translateY(-20%) scale(1.1);
+        color: var(--white);
+        box-shadow: rgba(127, 175, 222, 0.818) 1px 2px 25px -1px;
+        background-color: var(--main-suplemetar);
+
+}
 }

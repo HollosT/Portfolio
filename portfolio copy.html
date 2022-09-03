@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script defer type="module" src="assets/js/controller.js" ></script>
     <title>Tamás Hollós | UX & UI and Front-end developer</title>
 </head>
 
@@ -100,42 +101,76 @@
             
         </section>
         <section class="introduction portfolio_introduction">
-            <div class="text_box flex center_text text_box--1">
-                <div class="introduction-titletriangle">
-                    <h4>Gjoel Kro | Restaurant</h4>
-                    <!-- <?xml version="1.0" encoding="UTF-8"?> -->
-                    <svg id="introduction-triangle--1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 201.64 98.36">
-                        <path class="cls-1" d="M0,98.36L98.36,0l103.28,39.34L0,98.36Z" />
-                    </svg>
-                </div>
-                <div class="introduction_imgcontainer">
-                    <img class="introduction_gjoelkro-img--desktop introduction_desktop-img" src="assets/img/gjoelkro_home--desktop.png" alt="Gjoel Kro desktop home page | Restaurant">
-                    <img class="introduction_gjoelkro-img--mobile introduction_mobile-img" src="assets/img/gjoelkro_home--mobile.png" alt="Gjoel Kro mobile home page | Restaurant">
-                </div>
-                <div class="portfolio_introduction-list">
-                    <ul>
-                        <li>
-                            <i class="fa-regular fa-lightbulb"></i>
-                            <p> Full design process</p>
-                        </li>
+            <div class="text_box text_box--1 center_text flex">
+                <div class="text_box-introduction">
+                    <div class="introduction-titletriangle">
+                        <h4>Gjoel Kro | Restaurant</h4>
+                        <svg id="introduction-triangle--1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 201.64 98.36">
+                            <path class="cls-1" d="M0,98.36L98.36,0l103.28,39.34L0,98.36Z" />
+                        </svg>
+                    </div>
+                    <div class="introduction_imgcontainer">
+                        <img class="introduction_gjoelkro-img--desktop introduction_desktop-img" src="assets/img/gjoelkro_home--desktop.png" alt="Gjoel Kro desktop home page | Restaurant">
+                        <img class="introduction_gjoelkro-img--mobile introduction_mobile-img" src="assets/img/gjoelkro_home--mobile.png" alt="Gjoel Kro mobile home page | Restaurant">
+                    </div>
+                    <div class="portfolio_introduction-list">
+                        <ul>
                             <li>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            <p>Focusing on research and UX</p>
-                        </li>
-                    </ul>
+                                <i class="fa-regular fa-lightbulb"></i>
+                                <p> Full design process</p>
+                            </li>
+                                <li>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                <p>Focusing on research and UX</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <btn href="#" class="btn portfolio_introduction-btn flex">
+                        <p id="portfolio_introduction-btn--p" >Read more</p>  
+                        <svg class="portfolio_introduction-readBtn--triangle" xmlns="http://www.w3.org/2000/svg" width="27" height="14" viewBox="0 0 27 14">
+                            <path id="Polygon_12" data-name="Polygon 12" class="cls-1" d="M13.5,0,27,14H0Z" transform="translate(27 14) rotate(180)"/>
+                        </svg>
+                    </btn>
+                   
                 </div>
-                <btn href="#" class="btn portfolio_introduction-btn flex">
-                    <p>Read more</p>  
-                    <svg class="portfolio_introduction-readBtn--triangle" xmlns="http://www.w3.org/2000/svg" width="27" height="14" viewBox="0 0 27 14">
-                        <path id="Polygon_12" data-name="Polygon 12" class="cls-1" d="M13.5,0,27,14H0Z" transform="translate(27 14) rotate(180)"/>
-                    </svg>
-                </btn>
-                <div class="portfolio_introduction-caseContainer"></div>
-                <svg class="introduction-figure introduction-figure--1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 447 118.22">
+                <div class="cases-container">
+                    <!-- <div class="cases_tab-container">
+                        <button class="cases_btn cases_tab  cases_btn--active" data-tab="1">1. Challenge</button>
+                        <button class="cases_btn cases_tab " data-tab="2">2. Research</button>
+                        <button class="cases_btn cases_tab " data-tab="3">3. Structure</button>
+                        <button class="cases_btn cases_tab " data-tab="4">4. Design</button>
+                        <button class="cases_btn cases_tab " data-tab="5">5. User tests</button>
+                        <button class="cases_btn cases_tab " data-tab="6">6. Conclusion</button>
+                    </div>
+                    <div class="cases">
+                        <div class="cases_content cases_content--1">
+                            <h5>Problem:</h5>
+                            <p>
+                                Gjoel Kro is active on the social media platforms but did not have a
+                                website where they could comprehensively communicate with its visitors. 
+                                Also, it is an issue for the quests because they do not know why they should
+                                choose this facility over another.
+                            </p>
+                            <h5>Solution:</h5>
+                            <p>
+                                Creating a responsive website which can showcase the uniqueness of this place.
+                                Emphasise on the mobile first approach.
+                            </p>
+                            <h5>My role in the team:</h5>
+                            <p>
+                                Coordinator, UX Designer, Front-end developer
+                            </p>
+                        </div>
+                        <div class="cases_image-container">
+                            <img src="./assets/img/gjoelkro_home--desktop.png" alt="">
+                        </div>
+                    </div> -->
+                </div>
+                <svg class="business_value-figure--desktop-1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="177" height="206" viewBox="0 0 177 206">
                     <defs>
-                        <filter id="Path_26">
+                        <filter id="Path_28">
                             <feOffset dy="3" input="SourceAlpha" />
                             <feGaussianBlur stdDeviation="3" result="blur" />
                             <feFlood flood-opacity="0.161" result="color" />
@@ -145,37 +180,55 @@
                         </filter>
                     </defs>
                     <g data-type="innerShadowGroup">
-                        <path id="Path_26-2" data-name="Path 26" class="cls-1"
-                            d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
+                        <path id="Path_28-2" data-name="Path 28" class="cls-1" d="M0,0H177L45.539,12.688,0,206Z" />
                         <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
-                            <path id="Path_26-3" data-name="Path 26" class="cls-2"
-                                d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
+                            <path id="Path_28-3" data-name="Path 28" class="cls-2" d="M0,0H177L45.539,12.688,0,206Z" />
                         </g>
                     </g>
+                </svg>
+                 <svg class="business_value-figure--desktop-2" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="325" height="165" viewBox="0 0 325 165">
+                    <defs>
+                        <filter id="Path_25">
+                            <feOffset dy="3" input="SourceAlpha" />
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feFlood flood-opacity="0.161" result="color" />
+                            <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                            <feComposite operator="in" in="color" />
+                            <feComposite operator="in" in2="SourceGraphic" />
+                        </filter>
+                    </defs>
+                    <g data-type="innerShadowGroup">
+                        <path id="Path_25-2" data-name="Path 25" class="cls-1" d="M290.468,145.294,325,0V165H0Z" />
+                        <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+                            <path id="Path_25-3" data-name="Path 25" class="cls-2"
+                                d="M290.468,145.294,325,0V165H0Z" />
+                        </g>
+                    </g>
+                </svg>
+                <svg class="introduction-figure introduction-figure--1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 447 118.22">
+                        <defs>
+                            <filter id="Path_26">
+                                <feOffset dy="3" input="SourceAlpha" />
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feFlood flood-opacity="0.161" result="color" />
+                                <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                                <feComposite operator="in" in="color" />
+                                <feComposite operator="in" in2="SourceGraphic" />
+                            </filter>
+                        </defs>
+                        <g data-type="innerShadowGroup">
+                            <path id="Path_26-2" data-name="Path 26" class="cls-1"
+                                d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
+                            <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+                                <path id="Path_26-3" data-name="Path 26" class="cls-2"
+                                    d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
+                            </g>
+                        </g>
                 </svg>
             </div>
             <div class="text_box flex center_text text_box--2">
-                <svg class="introduction-figure introduction-figure--2" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 447 118.22">
-                    <defs>
-                        <filter id="Path_26">
-                            <feOffset dy="3" input="SourceAlpha" />
-                            <feGaussianBlur stdDeviation="3" result="blur" />
-                            <feFlood flood-opacity="0.161" result="color" />
-                            <feComposite operator="out" in="SourceGraphic" in2="blur" />
-                            <feComposite operator="in" in="color" />
-                            <feComposite operator="in" in2="SourceGraphic" />
-                        </filter>
-                    </defs>
-                    <g data-type="innerShadowGroup">
-                        <path id="Path_26-2" data-name="Path 26" class="cls-1"
-                            d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
-                        <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
-                            <path id="Path_26-3" data-name="Path 26" class="cls-2"
-                                d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
-                        </g>
-                    </g>
-                </svg>
                 <div class="introduction-titletriangle">
                     <h4>Kulia | Food truck</h4>
                     <!-- <?xml version="1.0" encoding="UTF-8"?> -->
@@ -205,7 +258,69 @@
                         <path id="Polygon_12" data-name="Polygon 12" class="cls-1" d="M13.5,0,27,14H0Z" transform="translate(27 14) rotate(180)"/>
                     </svg>
                 </btn>
-                <div class="portfolio_introduction-caseContainer"></div>
+                <div class="cases-container">
+                  
+                </div>
+                <svg class="business_value-figure--desktop-1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="177" height="206" viewBox="0 0 177 206">
+                <defs>
+                    <filter id="Path_28">
+                        <feOffset dy="3" input="SourceAlpha" />
+                        <feGaussianBlur stdDeviation="3" result="blur" />
+                        <feFlood flood-opacity="0.161" result="color" />
+                        <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                        <feComposite operator="in" in="color" />
+                        <feComposite operator="in" in2="SourceGraphic" />
+                    </filter>
+                </defs>
+                <g data-type="innerShadowGroup">
+                    <path id="Path_28-2" data-name="Path 28" class="cls-1" d="M0,0H177L45.539,12.688,0,206Z" />
+                    <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+                        <path id="Path_28-3" data-name="Path 28" class="cls-2" d="M0,0H177L45.539,12.688,0,206Z" />
+                    </g>
+                </g>
+                </svg>
+                <svg class="business_value-figure--desktop-2" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="325" height="165" viewBox="0 0 325 165">
+                <defs>
+                    <filter id="Path_25">
+                        <feOffset dy="3" input="SourceAlpha" />
+                        <feGaussianBlur stdDeviation="3" result="blur" />
+                        <feFlood flood-opacity="0.161" result="color" />
+                        <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                        <feComposite operator="in" in="color" />
+                        <feComposite operator="in" in2="SourceGraphic" />
+                    </filter>
+                </defs>
+                <g data-type="innerShadowGroup">
+                    <path id="Path_25-2" data-name="Path 25" class="cls-1" d="M290.468,145.294,325,0V165H0Z" />
+                    <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+                        <path id="Path_25-3" data-name="Path 25" class="cls-2"
+                            d="M290.468,145.294,325,0V165H0Z" />
+                    </g>
+                </g>
+                </svg>
+                <svg class="introduction-figure introduction-figure--1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 447 118.22">
+                    <defs>
+                        <filter id="Path_26">
+                            <feOffset dy="3" input="SourceAlpha" />
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feFlood flood-opacity="0.161" result="color" />
+                            <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                            <feComposite operator="in" in="color" />
+                            <feComposite operator="in" in2="SourceGraphic" />
+                        </filter>
+                    </defs>
+                    <g data-type="innerShadowGroup">
+                        <path id="Path_26-2" data-name="Path 26" class="cls-1"
+                            d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
+                        <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+                            <path id="Path_26-3" data-name="Path 26" class="cls-2"
+                                d="M0,0,22.438,97.366l207.921,15.593L437.1,97.366,447,0V118.22H0Z" />
+                        </g>
+                    </g>
+                </svg>
             </div>
             <div class="top_btn">
                 <svg class="top_btn--figure" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="109" height="86" viewBox="0 0 109 86">
