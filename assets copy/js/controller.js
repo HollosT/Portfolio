@@ -2,6 +2,8 @@
 import caseCollection from './casesData.js';
 import caseView from './views/caseBodyView.js';
 import casePreview from './views/casePreviewView.js';
+import tabView from './views/tabView.js';
+import * as model from './model.js'
 
 // const caseContainer = document.querySelector('.cases-container');
 // const readMoreBtn = document.querySelectorAll('.portfolio_introduction-btn');
@@ -15,20 +17,57 @@ const [cases] = caseCollection;
 
 const controlCases = function() {
     // Render Tabs
-    caseView.renderBtn(cases);
+    tabView.render(cases);
     
-    // Render Content
-    caseView.renderContentSection(1, cases);
+    // 
+    caseView.render(cases, 1)
+
+    // // Render Content
+    // caseView.generateMarkup(1, cases);
 
     // Add handlers for the tabs
-    caseView.addHandlerToCaseBtns(cases);
+    tabView.getActiveTab();
+
+}
+
+// When the tabs has been clicked
+const controlCaseBodyByTabs = async function() {
+    // getting the tab data from the dataset
+   try {
+       const tab = await tabView.getActiveTab()
+       console.log(tab);
+    } catch(err) {
+        console.log(err);
+    }
 }
 
 
-const init = function() {
+const init =  function() {
     casePreview.addHandler(controlCases)
+    tabView.addHandlerTabs(controlCaseBodyByTabs)
 }
 init()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // readMoreBtn.forEach(btn => {
 //     btn.addEventListener('click', (e) => {
