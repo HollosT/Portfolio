@@ -497,6 +497,10 @@ footer a {
     width: 4vw;
 }
 
+.portfolio_introduction-readBtn--triangleRotate {
+    rotate: 180deg;
+}
+
 .portfolio_introduction-readBtn--triangle .cls-1 {
     fill: var(--secondary);
   }
@@ -1006,6 +1010,7 @@ footer a {
         "title image"
         "list image"
         "btn ."
+        "case case"
         ;
         column-gap: 10vw;
         row-gap: 2vw;
@@ -1032,7 +1037,7 @@ footer a {
         margin-left: 2vw;
     }
 
-    .cases {
+    .cases-container {
         grid-area: case;
     }
 
@@ -1129,7 +1134,7 @@ footer a {
     .cases-container {
         background-color: var(--white);
     }
-    .cases-container div {
+    .cases-container > div {
         margin: -2vw 2vw 2vw;
     }
     .cases_tab-container {
@@ -1149,6 +1154,49 @@ footer a {
         grid-template-columns: 1fr 1fr;
         column-gap: 2vw;
     }
+
+    /* Loading animation on desktop */
+    .load {
+        gap: 0vw;
+        flex-direction: row;
+        grid-area: span 2;
+       
+    }
+    .load > .load_loading-dots {
+        background-color: var(--secondary);
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        
+    }
+    .loadingdots-animation {
+        margin: 1vw;
+        animation: load 1s ease-in-out 1 alternate;
+        -webkit-animation: load 1s ease-in-out 1 alternate;
+    }
+        @keyframes load {
+            0% {
+                transform: translateY(0vw);
+                -webkit-transform: translateY(0vw);
+                -moz-transform: translateY(0vw);
+                -ms-transform: translateY(0vw);
+                -o-transform: translateY(0vw);
+            } 
+            
+            100% {
+                transform: translateY(-2vw);
+                -webkit-transform: translateY(-2vw);
+                -moz-transform: translateY(-2vw);
+                -ms-transform: translateY(-2vw);
+                -o-transform: translateY(-2vw);
+}
+        }
+
+
     /* .cases > * {
         animation: overlay 2s ease-in forwards;
         -webkit-animation: overlay 2s ease-in forwards;

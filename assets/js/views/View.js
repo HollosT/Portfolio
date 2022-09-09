@@ -3,19 +3,42 @@
 export default class View {
     _data;
 
-    render(data, tabNumber = 1) {
+    async render(data, caseContainerNumber) {
         this._data = data;
-        console.log(`Hi iam ${tabNumber}`);
-        const markup = this.generateMarkup(tabNumber);
 
-        // this.clear()
-        this._parentElement.insertAdjacentHTML('beforeend', markup)
+        const markup = this.generateMarkup();
+        try{
+            if(!caseContainerNumber) {
+
+               
+    
+                this._parentElement.insertAdjacentHTML('beforeend', markup)
+            }
+            else {
+                document.querySelector(`.cases-container--${caseContainerNumber}`).insertAdjacentHTML('beforeend', markup)
+            }
+        }catch(err) {
+            console.log(err);
+        }
     }
 
-    // Hide the content container
+
+    
+
     clear() {
-        this._parentElement.innerHTML = '';
+        this._parentElement.querySelector('.cases-container').innerHTML = '';
     }
 
+    loading() {
+        const markup = `
+            <div class="load flex">
+                    <div class="load_loading-dots"></div>
+                    <div class="load_loading-dots"></div>
+                    <div class="load_loading-dots"></div>
+            </div>
+        `;
+        this.clear();
+        this._parentElement.insertAdjacentHTML('afterbegin', markup)
+    }
 
 }
