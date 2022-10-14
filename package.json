@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-v2",
+  "version": "2.0.0",
+  "description": "Professional portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "Tamas Hollos",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "@parcel/transformer-css": "^2.7.0"
+  }
+}

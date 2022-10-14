@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="src/styles/desktop.css">
+    <link rel="stylesheet" href="src/styles/global.css">
+    <script src="./src/js/animations/backNavigation.js" defer></script>
+    <script src="./src/js/animations/aboutAnimation.js" defer></script>
+    <title>Tamás Hollós | UX & UI and Front-end developer</title>
+</head>
+
+<body>
+    <header class="header cases-header about-header">
+        <section class="animateSVGsection">
+            <svg id="fillerSVG" viewBox="0 0 600 400" preserveAspectRatio="none">
+                <path id="filler"
+                    d="M0-27v-83h596v83c0,0-100.5,60.5-161,0s-149-5-149-5s-85,36-121,0C165-32,94.5-121.5,0-27z" />
+            </svg>
+        </section>
+        <nav id="nav" class="navbar navbar-cases navbar-about">
+            <a  id="backArrow" href="index.html?preview"><span class="material-symbols-outlined">arrow_back_ios</span> </a>
+            <div>
+                <a id="portfolioNav" href="cases.html">Portfolio</a>
+                <a id="aboutNav" href="#" class="activeNav">About me</a>
+            </div>
+        </nav>
+        
+      
+    </header>
+        
+    <main class="main-about" >
+        <section class="aboutSVG-container">
+            <svg id="aboutSVG" viewBox="0 0 600 400" preserveAspectRatio="none">
+                <path id="aboutSVGpath"
+                    d="M467.9,0H600v115.4c-8.5-0.8-18.8-3.2-22.4-10.5c-6-12.3,11.9-28.6,6.8-35.4c-7-9.4-48.6,12.3-52.3,5.9 c-2.5-4.2,15.7-13.7,15.8-30.1c0-8.9-5.3-17.7-12.3-22.2c-5.8-3.7-12.9-4.5-31.6-0.5c-32.8,7-46.6,17.1-50.8,12.8 C450.7,32.9,451.3,25.1,467.9,0z" />
+            </svg>
+        </section>
+
+        <section class="about-introduction center">
+            <h1>Words about me</h1>
+            <h2>and what I like to do...</h2>
+        </section>
+    <section class="about-article hidden-article about-article--intro about-article-container">
+        <!-- <article class="about-article hidden-article about-article--intro"> -->
+            <div class="about-story-title center">
+                <h4>I am 25 years old. I come from Hungary!</h4>
+                <h2>and I love...</h2>
+            </div>
+        <!-- </article> -->
+        <article class="about-article hidden-article about-article--nature">
+                <h2 class="center">Everything which is nature...</h2>
+                <div class="about-img-container center">
+                    <p class="first">I love being in the woods, being on the mountains, doing hiking, or just spending time outdoor</p>
+                    <img class="img1" src="./src/img/bysea.jpeg" alt="Tamas Hollos is by the Adriatic Sea">
+                    <img class="img2" src="./src/img/hiking2.jpeg" alt="Tamas Hollos is biking in Aalborg">
+                    <img class="img3" src="./src/img/camping.jpeg" alt="Tamas Hollos is biking in Aalborg">
+                    <p>Me camping by the Adriatic Sea</p>
+                    <p>Camping by the Danube </p>
+                    <p>Hiking in Transylvania </p>
+                </div>
+               
+        
+        </article>
+    </section>
+    <section class="about-article hidden-article about-article--intro about-article-container about-article--sport">
+     
+        <article class="about-article hidden-article about-article--nature about-article--sport">
+                <h2 class="center">Everything which is sport...</h2>
+                <div class="about-img-container center">
+                    <p class="first">I was a doing competitive sports for more than a decade. I still move on every single day.</p>
+                    <img class="img1" src="./src/img/coaching.jpeg" alt="Coaching kids to learn to fence">
+                    <img class="img2" src="./src/img/hollos.jpeg" alt="A competition in Munich.">
+                    <img class="img3" src="./src/img/kids.jpeg" alt="National championship">
+                    
+                </div>
+               
+        
+        </article>
+    
+    </section>
+
+    </main>
+    <footer class="footer-about">
+        <div>
+            <h2>Social</h2>
+            <a href="https://www.linkedin.com/in/tamas-hollos/">Linkedln</a>
+            <a href="https://github.com/HollosT?tab=repositories">My repositories on Github</a>
+        </div>
+        <address>
+            <h2>Drop an email!</h2>
+            <a href="mailto:hollos.tamas@ravensoft.hu">Contact me</a>
+        </address>
+    </footer>
+</body>
