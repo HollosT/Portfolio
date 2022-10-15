@@ -657,10 +657,47 @@
   color: var(--white);
   
 }
+
+/* About nature section */
 .about-article--nature {
    background-color: var(--primarly);
    position: relative;
 }
+
+.about-article--nature > .nature-title {
+    padding: 2vw 0 0;
+}
+
+#aboutBreakSVG {
+    position: absolute;
+    top: 0%;
+
+    fill: var(--lightgreen)
+}
+#aboutBreakSVG2 {
+    position: absolute;
+    bottom: -2%;
+    fill: var(--lightgreen);
+
+}
+
+#aboutBreakShadowSVG {
+    top: 2.3%;
+
+}
+.about-article--nature .svg-shadow {
+    position: absolute;
+    fill: var(--darkgrey);
+    opacity: 1;
+    filter: blur(.7vw);
+}
+
+.about-article--nature #breakShadowSVGpath2 {
+    position: absolute;
+    bottom: 1%;
+
+}
+
 .about-article .about-img-container {
     margin-top: 4vw;
     grid-column-start: 2;
@@ -670,19 +707,35 @@
     justify-items: center;
     gap: 1vw;
     width: 80%;
-
+    margin-bottom: 2vw;
 }
 .about-article .about-img-container > img {
     width: 100%;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
 }
 .about-article .about-img-container > .first {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 1;
     align-self: end;
-   
+    position: relative;
 }
+.about-article .about-img-container > .first > p {
+    position: relative;
+   z-index: 1;
+}
+
+#blupSVG {
+    position: absolute;
+    top: -700%;
+    /* height: 100%; */
+    width: 30vw;
+}
+#blupSVG > #blupSVGpath{
+    fill: var(--lightgreen)
+}
+
 .about-article .about-img-container > .img1 {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -697,12 +750,25 @@
     grid-column-start: 2;
     align-self: end;
 }
+
+.about-nature-p {
+    position: relative;
+}
+
+.about-nature-p-1 > #arrowLineSVG {
+    position: absolute;
+    width: 25vw;
+}
+.about-nature-p-1 > #arrowLineSVG > {
+    fill: var(--black)
+}
+
+/* About sport section */
 .about-article .about-article--sport {
     background-color: var(--lightgreen);
     position: relative;
 
 }
-
 
 
 .about-article .about-article--sport .about-img-container > .first {
