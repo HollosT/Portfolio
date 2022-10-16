@@ -86,8 +86,8 @@
     align-self: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin-top: 4vw;
-    margin-bottom: 0;
+    margin-top: 2vw;
+    padding-bottom: 2vw;
     opacity: 0;
 }
 
@@ -139,6 +139,7 @@
     flex-direction: column;
     gap: 1vw;
     position: relative;
+
 }
 
  .circle {
@@ -329,6 +330,14 @@
     color: var(--black);
 }
 
+#backArrow {
+    display: flex;
+    align-items: center;
+    transition:all  250ms ease-in;
+}
+#backArrow > p:hover {
+    color: var(--black);
+}
 
 
 /* Cases hero */
@@ -613,36 +622,29 @@
 }
 
 .main-about .about-introduction{
-    margin-top: 5vw;
-    height: 60vh;
+    padding-top: 5vw;
+    height: 90vh;
+    width: 90vw;
 }
 .about-introduction > h1{
     font-size: 9vw;
 }
 
-/* About svg */
-.aboutSVG-container {
-    height: 100%;
-    width:  100%; 
-    position: fixed;
-    top: 0%;
-}
-
-#aboutSVG{
-    position: relative;
-	width: 100%;
-}
-
-#aboutSVGpath{
-	fill: var(--lightgreen);
-	transition: d 1.5s;
-}
-
-
 .about-article { 
   position: relative; 
   padding: 8vw 0vw;
   transition: transform 1s, opacity 1s;
+
+}
+.about-article .first-break-about {
+    position: absolute;
+    top: -17%;
+    fill: var(--lightgreen);
+}
+
+#aboutBreakSVG1Shadow {
+    top: -18%;
+    fill: var(--darkgrey);
 
 }
 
@@ -662,11 +664,10 @@
 .about-article--nature {
    background-color: var(--primarly);
    position: relative;
+   padding: 20vw 0;
 }
 
-.about-article--nature > .nature-title {
-    padding: 2vw 0 0;
-}
+
 
 #aboutBreakSVG {
     position: absolute;
@@ -674,28 +675,31 @@
 
     fill: var(--lightgreen)
 }
-#aboutBreakSVG2 {
-    position: absolute;
-    bottom: -2%;
-    fill: var(--lightgreen);
 
-}
 
 #aboutBreakShadowSVG {
-    top: 2.3%;
+    top: 2.5%;
 
 }
-.about-article--nature .svg-shadow {
+
+.svg-shadow {
     position: absolute;
     fill: var(--darkgrey);
     opacity: 1;
     filter: blur(.7vw);
 }
+#aboutBreakSVG2 {
+    position: absolute;
+    bottom: -1%;
+    fill: var(--lightgreen);
 
-.about-article--nature #breakShadowSVGpath2 {
+}
+
+
+
+.about-article--nature #aboutBreakShadowSVG2 {
     position: absolute;
     bottom: 1%;
-
 }
 
 .about-article .about-img-container {
@@ -707,7 +711,7 @@
     justify-items: center;
     gap: 1vw;
     width: 80%;
-    margin-bottom: 2vw;
+
 }
 .about-article .about-img-container > img {
     width: 100%;
@@ -726,15 +730,7 @@
    z-index: 1;
 }
 
-#blupSVG {
-    position: absolute;
-    top: -700%;
-    /* height: 100%; */
-    width: 30vw;
-}
-#blupSVG > #blupSVGpath{
-    fill: var(--lightgreen)
-}
+
 
 .about-article .about-img-container > .img1 {
     grid-row-start: 1;
@@ -764,11 +760,12 @@
 }
 
 /* About sport section */
-.about-article .about-article--sport {
+ .about-article--sport {
     background-color: var(--lightgreen);
     position: relative;
-
+    padding-bottom: 6vw;
 }
+
 
 
 .about-article .about-article--sport .about-img-container > .first {
@@ -797,11 +794,34 @@
 
 }
 
-.about-article .about-article--sport > * {
+
+ .about-article--sport > * {
     color: var(--primarly);
 }
-.about-article .about-article--sport > .about-img-container > * {
+.about-article--sport > .about-img-container > * {
     color: var(--primarly);
+}
+
+/* Up arrow */
+
+.up-container  {
+    position: absolute;
+    right: 0%;
+    bottom: 5%;
+}
+
+.up-container #blop {
+    position: absolute;
+   width: 20vw;
+   right: 0%;
+   bottom:  -200%;
+   fill: var(--black);
+}
+
+.up-container  .material-symbols-outlined  {
+    
+    scale: 2;
+
 }
 
 .footer-about {
