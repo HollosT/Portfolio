@@ -378,7 +378,7 @@
 /* Wave */
 .svgcontainer{
     height: 100%;
-    width:100%; 
+    /* width:100%;  */
     position: absolute;
     top: 0%;
     z-index: var(--svgContainerZ);
@@ -961,15 +961,7 @@
         padding: .5vw;
       
     }
-    .svgcontainer{
-        height: 100%;
-        width:100%; 
-  
-    }
-    #waveSVG{
-        width: 100%;
-        height: 100%; 
-    }
+   
     .case-container > .case-container-introduction > h4 {
         font-size: 3vw;
         font-weight: 400;
