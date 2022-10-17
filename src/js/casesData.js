@@ -24,6 +24,16 @@ const caseCollection = [
                     "list_iconClass": "fa-solid fa-database"
                 },
             ],
+            "preview_links": [
+                {
+                    "link_name": "Front-end solution",
+                    "link": "https://github.com/HollosT/WAD-front-end"
+                },
+                {
+                    "link_name": "Back-end solution",
+                    "link": "https://github.com/HollosT/WAD-Group3"
+                },  
+            ],
             "preview_btn": {
                 "btn_text": "Read more",
                 "data_btn": 1
@@ -206,6 +216,16 @@ const caseCollection = [
 
                 },
             ],
+            "preview_links": [
+                {
+                    "link_name": "Front-end solution",
+                    "link": "https://github.com/HollosT/Nasa-APOD"
+                },
+                {
+                    "link_name": "Live demo",
+                    "link": "https://mmd.ucn.dk/class/MDE-CSD-S21/10407745/nasa-apod/#/"
+                },  
+            ],
             "preview_list": [
                 {
                     "list_item": "Single-page app",
@@ -377,6 +397,16 @@ const caseCollection = [
                     "img_class": "case-img case-img-mobile"
 
                 },
+            ],
+            "preview_links": [
+                {
+                    "link_name": "Front-end solution",
+                    "link": "https://github.com/HollosT/Kulia--new"
+                },
+                {
+                    "link_name": "Live demo",
+                    "link": "https://mmd.ucn.dk/class/MDE-CSD-S21/10407750/Sem2/Kulia/"
+                },  
             ],
             "preview_list": [
                 {

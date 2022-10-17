@@ -2,6 +2,7 @@
 import caseView from './views/caseBodyView.js';
 import casePreview from './views/casePreviewView.js';
 import tabView from './views/tabView.js';
+import linkView from './views/linkView.js';
 import * as model from './model.js'
 import caseBodyView from './views/caseBodyView.js';
 
@@ -47,15 +48,19 @@ const controlCasesbyBtn = async function (btnNumber) {
             
         })
 
-
+      
 
         const contentData = await model.findContent(btn);
-            // Render Tabs
-            tabView.render(contentData.tabs, btn);
+        // render links
 
-            // // Render content
-            const tabData = await model.findTabContent(1)
-            caseView.render(tabData, btn);
+        linkView.render(contentData.preview.preview_links, btn)
+       
+        // Render Tabs
+        tabView.render(contentData.tabs, btn);
+
+        // Render content
+        const tabData = await model.findTabContent(1)
+        caseView.render(tabData, btn);
 
 
 

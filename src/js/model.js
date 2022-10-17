@@ -12,7 +12,7 @@ let caseIndex;
 
 
 
-// Getting the right overoll content by the BTN
+// Getting the right overall content by the BTN
 export const findContent = async function(btn) {
     try{
         for (let i = 0; cases.length > i; i++) {
