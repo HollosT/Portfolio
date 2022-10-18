@@ -348,7 +348,7 @@
     height: 15vw;
 }
 
-.cases-hero > h1 {
+.cases-hero > {
     font-size: 5vw;
     color: var(--black); 
     position: relative;
@@ -393,12 +393,13 @@
 
 .wave {
     fill: var(--blue);
-	transition: d 1.52s;
+	transition: d 1.5s;
 
 }
 .wave2 {
     fill: var(--black);
     filter: blur(.1vw);
+
 
 }
 
