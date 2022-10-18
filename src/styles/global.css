@@ -195,6 +195,10 @@ footer {
         background-color: transparent;
     
     }
+    .mobile-navbar-index > .hamburger-menu {
+        color: var(--primarly);
+        margin-left: auto;
+    }
 
     .navbar {
         display: none;
