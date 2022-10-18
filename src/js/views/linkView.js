@@ -6,7 +6,8 @@ class Case extends View {
     
     generateMarkup(id) {
         let markup = `
-                <div class="cases-link-container">`
+                <div class="cases-link-container"><h3> See it:</h3>`
+                    
                 this._data.forEach((link) => {
                         markup += 
                         `<a class="cases-link" href="${link.link}" onclick="window.open('${link.link}')"> ${link.link_name} </a>`

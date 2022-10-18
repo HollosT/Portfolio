@@ -54,28 +54,5 @@ const svgAnimation = function() {
 }
 
 
-// // Observing the about nature section
 
-// const sportObs = function(entries, observer) {
-//     const [entry] = entries;
-//     console.log(entry);
-//     if(!entry.isIntersecting) return;
 
-//     // prepare animation
-//     console.log('passed');
-//     // animateWaves()
-// }
-
-// const sportObserver = new IntersectionObserver(sportObs, {
-//     root: null,
-//     threshold: .5,
-// })
-
-// sportObserver.observe(aboutSport);
-    
-
-// const animateWaves = function() {
-//     waveDownPath.setAttribute("d", "M0,437.8h600v-919.2c-2.4,76.6-7.2,193.6-18.2,274.2c-25.2,184.7-57.4-3.4-106.2-29.1 C426.9-261.8,431-89.2,364.8-33c-56.4,47.8-60-76.6-134.3-60.9c-44.3,9.3-45.1,54-104,69.6C46.5-3.1,23.3-79.1,11.3-234.7 C-1.9-405.3,0-645.1,0-631.1C0-274.8,0,81.5,0,437.8z")
-//     waveDownPathShadow.setAttribute("d", "M0,437.8h600v-919.2c-2.4,76.6-7.2,193.6-18.2,274.2c-25.2,184.7-57.4-3.4-106.2-29.1 C426.9-261.8,431-89.2,364.8-33c-56.4,47.8-60-76.6-134.3-60.9c-44.3,9.3-45.1,54-104,69.6C46.5-3.1,23.3-79.1,11.3-234.7 C-1.9-405.3,0-645.1,0-631.1C0-274.8,0,81.5,0,437.8z")
-
-// }

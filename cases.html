@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="src/styles/desktop.css">
     <link rel="stylesheet" href="src/styles/global.css">
     <script defer type="module" src="src/js/controller.js" ></script>
+    <script defer type="module" src="src/js/animations/upArrow.js" ></script>
+    <script defer type="module" src="src/js/animations/hamburgerMenu.js" ></script>
     <script defer type="module" src="src/js/animations/backNavigation.js" ></script>
     <title>Tamás Hollós | UX & UI and Front-end developer</title>
 </head>
@@ -28,8 +30,17 @@
                     d="M0-27v-83h596v83c0,0-100.5,60.5-161,0s-149-5-149-5s-85,36-121,0C165-32,94.5-121.5,0-27z" />
             </svg>
         </section>
+        <nav class="mobile-navbar">
+            <a class=" back-arrow"  href="index.html?preview"><span class="material-symbols-outlined">arrow_back_ios</span> <p>HT</p></a>
+            <span id="hamburgerMenu" class="hamburger-menu material-symbols-outlined"> menu </span>
+                
+        </nav>
+        <nav class="mobile-nav">
+            <a  href="cases.html" class="activeNav">Portfolio</a>
+            <a  href="about.html">About me</a>
+        </nav>
         <nav id="nav" class="navbar navbar-cases">
-            <a  id="backArrow" href="index.html?preview"><span class="material-symbols-outlined">arrow_back_ios</span> <p>HT</p></a>
+            <a  id="backArrow" href="index.html?preview"><span class="material-symbols-outlined dekstop-back-arrow">arrow_back_ios</span> <p>HT</p></a>
             <div>
                 <a id="portfolioNav" href="cases.html" class="activeNav">Portfolio</a>
                 <a id="aboutNav" href="#">About me</a>
@@ -45,6 +56,14 @@
        
         <section class="portfolio_introduction">           
         </section>
+        <div class="up-container up-container-cases">
+            <div>
+                <span id="upArrow" class="material-symbols-outlined"> keyboard_arrow_up </span>
+                <p>Go up</p>
+
+            </div>
+
+        </div>
     </main>
     <footer>
         <div>
@@ -53,8 +72,8 @@
             <a href="https://github.com/HollosT?tab=repositories" target="_blank">My repositories on Github</a>
         </div>
         <address>
-            <h2>Drop an email!</h2>
-            <a href="mailto:hollos.tamas@ravensoft.hu">Contact me</a>
+            <h2>If you would like to contact me...</h2>
+            <a href="mailto:hollos.tamas@ravensoft.hu">Send and email</a>
         </address>
     </footer>
 </body>
