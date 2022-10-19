@@ -6,7 +6,7 @@ class Case extends View {
     
     generateMarkup(id) {
         let markup = `
-                <div class="cases-link-container"><h5> See it:</h5>`
+                <div class="cases-link-container"><h5> See the:</h5>`
                     
                 this._data.forEach((link) => {
                         markup += 
