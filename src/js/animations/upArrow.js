@@ -27,5 +27,5 @@ const animateArrow = function() {
 }
 
 upArrow.addEventListener('click', (e) => {
-    document.querySelector('#nav').scrollIntoView({behavior: 'smooth'})
+        document.querySelector('#header').scrollIntoView({behavior: 'smooth'})
 })

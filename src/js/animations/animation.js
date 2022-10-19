@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
         overlayContainer.style.backgroundColor = 'var(--black)'
 
-        overlayContainer.classList.add('stop-scroll')
+        // overlayContainer.classList.add('stop-scroll')
 
         overlayContainerDiv.classList.remove('hide')
         articleContainer.classList.add('article-container-animation')
@@ -261,7 +261,7 @@ articleContainer.addEventListener('click',  (e) => {
 
             } 
         })
-    }
+    } 
 
      
 })

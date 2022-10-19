@@ -82,6 +82,18 @@ const controlCasesbyArrow = async function (arrowNumber) {
     }
 
 }
+// Control cases by btn --> close the article on mobile view
+const controlCasesbyMobile = async function (mobileNumber) {
+    try {
+
+         casePreview.animationClose(mobileNumber)
+      
+
+    } catch (err) {
+        console.log(err);
+    }
+
+}
 
 
 
@@ -114,6 +126,8 @@ const init = async function () {
         await casePreview.addHandlerToBtn(controlCasesbyBtn)
 
         await casePreview.addHandlerToArrow(controlCasesbyArrow)
+        
+        await casePreview.addHandlerToMobileArrow(controlCasesbyMobile)
 
         await tabView.addHandlerTabs(controlCaseBodyByTabs)
     } catch (err) {
