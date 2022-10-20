@@ -20,7 +20,7 @@ const caseCollection = [
                     "list_iconClass": "fa-solid fa-code"
                 },
                 {
-                    "list_item": "Database",
+                    "list_item": "Own Database",
                     "list_iconClass": "fa-solid fa-database"
                 },
             ],
@@ -383,7 +383,7 @@ const caseCollection = [
     // Kulia preview
     {   "preview": {
             "case_box": 3,
-            "preview_title": "Kulia | Food truck",
+            "preview_title": "Kulia",
             "preview_images": [
                 {
                     "img_src": "kulia-home.png",
