@@ -50,11 +50,11 @@
         
     <main class="main-about" >
     
-        <section class="about-introduction center">
+        <section class="about-introduction  center">
             <h1>Words about me</h1>
             <h2>and what I like to do...</h2>
         </section>
-    <section class="about-article  about-article--intro about-article-container hidden-article">
+    <section class="about-article  about-article--intro  hidden-article about-introduction-container">
         <svg id="aboutBreakSVG1Shadow" viewBox="0 0 600 100" class="first-break-svg svg-shadow" >
             <path 
             d="M0,81.7C18.21,43.15,38.64,30.22,54.38,25.76c51.53-14.63,100.08,48,143.73,25.43,17.6-9.1,21.5-25.39,41.96-26.99,16.11-1.26,22,8.19,45.48,10.72,12.01,1.29,12.8-.93,42.32-4.3,35.78-4.09,53.67-6.13,69.92-.97,21.17,6.72,19.59,15.66,37.22,18.99,21.54,4.06,29.98-8.14,62.23-16.66,17.3-4.57,59.11-15.61,82.36,3.61,19.43,16.07,20.41,48.98,20.41,46.12V0H0V81.7Z" />
@@ -63,55 +63,84 @@
             <path id="breakSVGpath1"
             d="M0,81.7C18.21,43.15,38.64,30.22,54.38,25.76c51.53-14.63,100.08,48,143.73,25.43,17.6-9.1,21.5-25.39,41.96-26.99,16.11-1.26,22,8.19,45.48,10.72,12.01,1.29,12.8-.93,42.32-4.3,35.78-4.09,53.67-6.13,69.92-.97,21.17,6.72,19.59,15.66,37.22,18.99,21.54,4.06,29.98-8.14,62.23-16.66,17.3-4.57,59.11-15.61,82.36,3.61,19.43,16.07,20.41,48.98,20.41,46.12V0H0V81.7Z" />     
         </svg>
-            <div class="about-story-title center">
-                <h4>I am 25 years old and I come from Hungary!</h4>
-                <h2>what I love is...</h2>
+            <div class="about-story-title ">
+                <div class="center">
+                    <h4>I am 25 years old and I come from Hungary!</h4>
+                    <h2>what I love is...</h2>
+
+                </div>
             </div>
-        <article class="about-article hidden-article about-article--nature">
-            <svg id="aboutBreakShadowSVG" viewBox="0 0 600 100" class="svg-shadow">
-                <path id="breakShadowSVGpath"
+            <svg id="aboutBreakShadowSVG2" viewBox="0 0 600 100" class="svg-shadow">
+                <path id="breakShadowSVGpath2"
                 d="M0,81.7C18.21,43.15,38.64,30.22,54.38,25.76c51.53-14.63,100.08,48,143.73,25.43,17.6-9.1,21.5-25.39,41.96-26.99,16.11-1.26,22,8.19,45.48,10.72,12.01,1.29,12.8-.93,42.32-4.3,35.78-4.09,53.67-6.13,69.92-.97,21.17,6.72,19.59,15.66,37.22,18.99,21.54,4.06,29.98-8.14,62.23-16.66,17.3-4.57,59.11-15.61,82.36,3.61,19.43,16.07,20.41,48.98,20.41,46.12V0H0V81.7Z" />
 
             </svg>
-            <svg id="aboutBreakSVG" viewBox="0 0 600 81.87">
-                <path id="breakSVGpath"
+            <svg id="aboutBreakSVG2" viewBox="0 0 600 81.87">
+                <path id="breakSVGpath2"
                     d="M0,81.7C18.21,43.15,38.64,30.22,54.38,25.76c51.53-14.63,100.08,48,143.73,25.43,17.6-9.1,21.5-25.39,41.96-26.99,16.11-1.26,22,8.19,45.48,10.72,12.01,1.29,12.8-.93,42.32-4.3,35.78-4.09,53.67-6.13,69.92-.97,21.17,6.72,19.59,15.66,37.22,18.99,21.54,4.06,29.98-8.14,62.23-16.66,17.3-4.57,59.11-15.61,82.36,3.61,19.43,16.07,20.41,48.98,20.41,46.12V0H0V81.7Z" />
             </svg>
+    
+        <article class="about-article hidden-article about-article--nature">
+            
                 <h2 class="center nature-title">Everything which is nature</h2>
                 <div class="about-img-container center">
                     <div class="first">
                         <p >I love being in the woods, being on the mountains, doing hiking, or just spending time outdoor</p>
                     </div>
-                    <img class="img1" src="./src/img/bysea.jpeg" alt="Tamas Hollos is by the Adriatic Sea">
-                    <img class="img2" src="./src/img/hiking2.jpeg" alt="Tamas Hollos is biking in Aalborg">
-                    <img class="img3" src="./src/img/camping.jpeg" alt="Tamas Hollos is biking in Aalborg">
-                
+                    
+                    <div class="img-container img1">
+                        <img class="about-img" src="./src/img/bysea.jpeg" alt="Tamas Hollos is by the Adriatic Sea">
+                        <p> I spent a week and a half camping next to <br> the Adriatic Sea.</p>
+                    </div>
+
+                    <div class="img-container img2">
+                        <img class="about-img img2" src="./src/img/hiking2.jpeg" alt="Tamas Hollos is biking in Aalborg">
+                        <p > We spent 6 days with kayaking on the Danue.</p>
+                    </div>
+                    <div class="img-container img3">
+                        <img class="about-img " src="./src/img/camping.jpeg" alt="Tamas Hollos is biking in Aalborg">
+                        <p> We were hiking in the mountains of Transylvania.</p>
+
+                    </div>
                 </div>
                
-                <svg id="aboutBreakShadowSVG2" viewBox="0 0 600 400" class="svg-shadow">
-                    <path id="breakShadowSVGpath2" class="wave-animation"
-                    d="M0,437.8h600V344c-2.4,7.8-7.2,19.8-18.2,28c-25.2,18.9-57.4-0.3-106.2-3c-48.7-2.6-44.5,15-110.8,20.8 c-56.4,4.9-60-7.8-134.3-6.2c-44.3,1-45.1,5.5-104,7.1c-80,2.2-103.2-5.6-115.2-21.5C-1.9,351.7,0,327.2,0,328.7 C0,365,0,401.4,0,437.8z" />
-                    
-                </svg>
-                <svg id="aboutBreakSVG2" viewBox="0 0 600 400">
-                    <path id="breakSVGpath2" class="wave-animation"
-                        d="M0,437.8h600V344c-2.4,7.8-7.2,19.8-18.2,28c-25.2,18.9-57.4-0.3-106.2-3c-48.7-2.6-44.5,15-110.8,20.8 c-56.4,4.9-60-7.8-134.3-6.2c-44.3,1-45.1,5.5-104,7.1c-80,2.2-103.2-5.6-115.2-21.5C-1.9,351.7,0,327.2,0,328.7 C0,365,0,401.4,0,437.8z" />
-                </svg>
+                
+               
+               
         </article>
+    
     </section>
-    <section class="about-article--sport">
-        <article class="about-article hidden-article about-article--sport">
+    <section class="about-section--sport about-article hidden-article">
+        <svg id="aboutBreakShadowSVG3" viewBox="0 0 600 100" class="svg-shadow svg-3">
+            <path id="breakShadowSVGpath3"
+            d="M0,81.7C18.21,43.15,38.64,30.22,54.38,25.76c51.53-14.63,100.08,48,143.73,25.43,17.6-9.1,21.5-25.39,41.96-26.99,16.11-1.26,22,8.19,45.48,10.72,12.01,1.29,12.8-.93,42.32-4.3,35.78-4.09,53.67-6.13,69.92-.97,21.17,6.72,19.59,15.66,37.22,18.99,21.54,4.06,29.98-8.14,62.23-16.66,17.3-4.57,59.11-15.61,82.36,3.61,19.43,16.07,20.41,48.98,20.41,46.12V0H0V81.7Z" />
+
+        </svg>
+        <svg id="aboutBreakSVG3" viewBox="0 0 600 81.87" class="svg-3">
+            <path id="breakSVGpath3"
+                d="M0,81.7C18.21,43.15,38.64,30.22,54.38,25.76c51.53-14.63,100.08,48,143.73,25.43,17.6-9.1,21.5-25.39,41.96-26.99,16.11-1.26,22,8.19,45.48,10.72,12.01,1.29,12.8-.93,42.32-4.3,35.78-4.09,53.67-6.13,69.92-.97,21.17,6.72,19.59,15.66,37.22,18.99,21.54,4.06,29.98-8.14,62.23-16.66,17.3-4.57,59.11-15.61,82.36,3.61,19.43,16.07,20.41,48.98,20.41,46.12V0H0V81.7Z" />
+        </svg>
+        <article class=" about-article--sport">
                 <h2 class="center">Everything which is sport</h2>
                 <div class="about-img-container center">
                     <p class="first">I was a doing competitive sports for more than a decade. I still move on every single day.</p>
-                    <img class="img1" src="./src/img/coaching.jpeg" alt="Coaching kids to learn to fence">
-                    <img class="img2" src="./src/img/hollos.jpeg" alt="A competition in Munich.">
-                    <img class="img3" src="./src/img/kids.jpeg" alt="National championship">
+                    <div class="img-container img4">
+                        <img class="about-img" src="./src/img/coaching.jpeg" alt="Coaching kids to learn to fence">
+                        <p>I was coaching kids for several years.</p>
+                    </div>
                     
+                    <div class="img-container img5">
+                        <img class="about-img " src="./src/img/kids.jpeg" alt="National championship">
+                        
+                        <p> I started fencing at the age of 6. </br> This was our first silverware we won.</p>
+                    </div>
+                    <div class="img-container img6">
+                        <img class="about-img " src="./src/img/hollos.jpeg" alt="A competition in Munich.">
+                        <p> I particapeted many international competition,</br> this was in Munich.</p>
+
+                    </div> 
                 </div>
-               
-        
-            </article>
+        </article>
             <div class="up-container up-container-about">
                 <div>
                     <span id="upArrow" class="material-symbols-outlined"> keyboard_arrow_up </span>
