@@ -9,12 +9,16 @@ const icons = document.querySelectorAll('.article-icons')
 const articleBox = document.querySelectorAll('.article-box')
 const articleBtn = document.querySelectorAll('.article-btn')
 const navbar = document.querySelector('.navbar')
-const titleIntroductionContainer = document.querySelector('.title-introduction_container')
+const titleIntroductionContainer = document.querySelector('.title-introduction_container');
+const ctaScroll = document.querySelector('.cta-scroll')
+const ctaPara = document.querySelector('.cta-scroll-p')
 
 
 // Main container
 let startingYOffset = window.pageYOffset
-let ocXPos = overlayContainer.getBoundingClientRect().x
+const curOcXPos = overlayContainer.getBoundingClientRect().x
+let ocXPos;
+
 
 
 
@@ -37,40 +41,55 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 
     window.addEventListener('scroll', () => {
+       ocXPos = overlayContainer.getBoundingClientRect().x
     
-        ocXPos = overlayContainer.getBoundingClientRect().x
-    
-        // console.log(ocXPos);
+        const halfCurOcXPos = curOcXPos / 2 
     
         // Keeping track how far is the left side of the body
         if (!ocXPos === 0 || ocXPos > 0) {
+
+            if( halfCurOcXPos >= ocXPos) {
+                ctaScroll.classList.remove('hide')
+                ctaPara.innerHTML = 'just a little bit more...'
+                
+                
+            } else {
+                ctaScroll.classList.add('hide')
+
+            }
     
             //Scrolling down --> increasing the width of the div
             if (window.pageYOffset > startingYOffset) {
                 startingYOffset = window.pageYOffset;
+               if(halfCurOcXPos / 2 >= ocXPos) {
+                ctaPara.innerHTML = 'Almost there...'
+               } 
+
+
                 overlayContainer.style.width = Number.parseFloat(getComputedStyle(overlayContainer).width, 10) + 15 + 'px';
                 overlayContainer.style.height = Number.parseFloat(getComputedStyle(overlayContainer).height, 10) + 25 + 'px';
-    
-    
-    
+                
+           
             }
             // Scrolling up --> decreasing the width of the div
             else if (window.pageYOffset < startingYOffset) {
+
                 // If the very top of the page is reached --> cannot scroll up more --> restarting the position of the div
                 if (window.pageYOffset === 0) {
-    
-    
+                    
+                    
                     overlayContainer.style.width = '5vw';
                     overlayContainer.style.height = '110vh';
                     startingYOffset = 0;
                 }
                 startingYOffset = window.pageYOffset;
+                ctaPara.innerHTML = 'we were so close...'
                 overlayContainer.style.width = Number.parseFloat(getComputedStyle(overlayContainer).width, 10) - 15 + 'px';
                 overlayContainer.style.height = Number.parseFloat(getComputedStyle(overlayContainer).height, 10) - 25 + 'px';
             }
     
     
-        }
+        } 
         // If the distance between the left side and the div is 0 -->
         // fix the div to the viewport
         // prepare the template
@@ -206,10 +225,10 @@ articleContainer.addEventListener('click',  (e) => {
         const articleNum = parentEl.dataset.article
 
         // get the color of the clicked card
-        const waveColor = getComputedStyle(parentEl).backgroundColor;
-        document.documentElement.style.setProperty('--wave', waveColor)
+        localStorage.removeItem('color')
+        const boxColor = parentEl.dataset.article
+        localStorage.setItem('color', boxColor)
 
-       
         
         const reParentElLeft = parentEl.getBoundingClientRect().left
         const reParentElTop = parentEl.getBoundingClientRect().top
@@ -254,6 +273,8 @@ articleContainer.addEventListener('click',  (e) => {
 
                     if(article.getBoundingClientRect().x <= 0 && article.getBoundingClientRect().y <= 0 ) {
                         clearInterval(animationInt);
+
+                        
                         articleNum == 3 ? window.location.href = "about.html" : window.location.href = "cases.html"
                     }
 

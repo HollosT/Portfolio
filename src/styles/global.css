@@ -29,7 +29,7 @@ body {
     --secondary-suplementar: #5C4C4C;
     --third-suplementar: #CEA9A9;
     --white: white;
-    --btn-green: #03cfb4;
+    --btn-green: #9be15d;
     --lightgreen: #a5d0bf;
     --blockgreen: #39b385;
     --darkgreen: #2c936b;
@@ -37,8 +37,8 @@ body {
     --gradient-primary: linear-gradient(#39b385, #9be15d);
     --black: #252525;
 
-    --clicked: white;
-    --wave: #76a8c5;
+    --case-bg: #d3e7f3;
+    --wave-bg: #76a8c5;
 }
 
 li {
@@ -54,7 +54,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, h7, p {
-    color: var(--secondary-suplementar);
+    color: var(--black);
 }
 
 h1 {
@@ -75,7 +75,7 @@ h2>span {
 
 h3 {
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 4vw;
 }
 
 h4 {
@@ -125,7 +125,7 @@ i {
     }
     
     h4 {
-        font-size: 5vw;
+        font-size: 3vw;
     }
     h5 {
         font-size: 4vw;

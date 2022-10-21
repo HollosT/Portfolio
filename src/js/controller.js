@@ -8,6 +8,8 @@ import caseBodyView from './views/caseBodyView.js';
 
 
 
+
+
 // when the portfolio page is loaded
 const controlCasesPreview = async function () {
     try {
