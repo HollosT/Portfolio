@@ -70,7 +70,6 @@
 
 @keyframes arrow {
     0%, 100% {
-
         transform: translateX(0vw);
 
     } 50% {
@@ -87,7 +86,7 @@
 
 /* Smaller device */
 @media (max-width: 750px) {
-    .overlay-container {
+    .overlay-container-div {
         overflow: scroll;
         height: 100%;
 
