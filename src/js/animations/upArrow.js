@@ -1,5 +1,6 @@
+const arrowContainer = document.querySelector('.up-container')
 const upArrow = document.querySelector('#upArrow')
-const upContainer = document.querySelector('.up-container-cases')
+
 
 
 // // Observing the up arrow
@@ -18,12 +19,11 @@ const arrowObserver = new IntersectionObserver(arrowObs, {
     threshold: .15,
 })
 
-arrowObserver.observe(upArrow);
+arrowObserver.observe(arrowContainer);
     
 
 const animateArrow = function() {
-    console.log(upContainer)
-    upContainer.classList.remove('hide')
+    upArrow.classList.remove('hide')
     upArrow.classList.add('arrow-animation')
 
 }

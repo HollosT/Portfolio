@@ -45,6 +45,22 @@
 }
 
 
+/* Smaller device */
+@media (max-width: 750px) {
+    .title-introduction_container .hero-title {
+        display: flex;
+        flex-direction: column;
+        gap: 15vw;
+        margin-bottom: 10vw;
+    }
+    
+    .home-location-job>div {
+        gap: 3vw;
+    }
+    
+    
+}
+
 /* ********** */
 /* Teaser container */
 .overlay-container {
