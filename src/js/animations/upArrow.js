@@ -1,5 +1,5 @@
 const upArrow = document.querySelector('#upArrow')
-
+const upContainer = document.querySelector('.up-container-cases')
 
 
 // // Observing the up arrow
@@ -22,10 +22,13 @@ arrowObserver.observe(upArrow);
     
 
 const animateArrow = function() {
+    console.log(upContainer)
+    upContainer.classList.remove('hide')
     upArrow.classList.add('arrow-animation')
 
 }
 
 upArrow.addEventListener('click', (e) => {
+
         document.querySelector('#header').scrollIntoView({behavior: 'smooth'})
 })
