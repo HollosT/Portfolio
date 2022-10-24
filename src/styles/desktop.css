@@ -6,7 +6,6 @@
 /* Hero section */
 .hero-section {
     background-color: var(--primarly);
-    height: 150vw;
     position: relative;
 
 }
@@ -16,6 +15,10 @@
     height: 100vh;
     display: grid;
     grid-template-columns: auto auto;
+}
+.hero-section > .animateSVGsection {
+    height: 100%;
+    overflow: hidden;
 }
 
 .title-introduction_container {
@@ -114,15 +117,52 @@ nav a {
 }
 
 
-nav a:hover {
+nav a:hover
+ {
     border-bottom: 1px solid var(--primarly);
     color: var(--white);
+}
+
+.navbar-index {
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.navbar-index > .back-arrow {
+    display: flex;
+    align-items: center;
+    margin-left: 1vw;
+}
+.navbar-index > .back-arrow > p {
+    color: var(--darkgrey);
+}
+.navbar-index > .back-arrow:hover > p,
+.navbar-index > .back-arrow > p:hover {
+    color: var(--white);
+    border-bottom: none !important;
+}
+
+.navbar-index > div {
+    display: flex;
+    gap: 5vw;   
+}
+.navbar-index > div:nth-child(2) {
+    margin-left: 16vw;
+}
+
+.navbar-index  .contact-btn {
+    padding: .2vw 1vw;
+    border-radius: 100vw;
+    border: none;
+    align-self: center;
 }
 
 /* ********* */
 
 /* article container */
 .article-container {
+    /* height: 100%; */
     display: grid;
     justify-self: center;
     align-self: center;
@@ -328,7 +368,9 @@ nav a:hover {
     grid-row: 2 / span 1;
     justify-self: start;
     align-self: flex-start;
+
 }
+
 
 /* smaller device */
 @media (max-width: 750px) {

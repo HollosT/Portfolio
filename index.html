@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="src/styles/desktop.css">
     <link rel="stylesheet" href="src/styles/global.css">
     <script src="./src/js/animations/animation.js" defer></script>
+    <script defer type="module" src="src/js/animations/backNavigation.js" ></script>
     <script defer type="module" src="src/js/animations/hamburgerMenu.js"></script>
 
     <title>Tamás Hollós | UX & UI and Front-end developer</title>
@@ -23,6 +24,12 @@
     </header>
     <main>
         <section class="hero-section">
+            <section class="animateSVGsection">
+                <svg id="fillerSVG" viewBox="0 0 600 400" preserveAspectRatio="none">
+                    <path id="filler"
+                        d="M0-27v-83h596v83c0,0-100.5,60.5-161,0s-149-5-149-5s-85,36-121,0C165-32,94.5-121.5,0-27z" />
+                </svg>
+            </section>
             <div class="title-introduction_container">
                 <div class="hero-title">
                     <h1>Tamás Hollós</h1>
@@ -52,15 +59,23 @@
                         <span id="hamburgerMenu" class="hamburger-menu material-symbols-outlined"> menu </span>
                     </nav>
                     <nav class="mobile-nav">
-                        <a  href="cases.html">Cases</a>
-                        <a  href="about.html">About me</a>
+                        <a   href="cases.html">Cases</a>
+                        <a   href="about.html">About me</a>
                         <a href="mailto:hollos.tamas@ravensoft.hu" class="contact">Contact me
                             <span class="material-symbols-outlined email-icon"> mail</span>
                         </a>           
                     </nav>
-                    <nav class="navbar">
-                        <a href="cases.html">Cases</a>
-                        <a href="about.html">About me</a>
+                    <nav class="navbar navbar-index">
+                        <a   class="back-arrow"  href="index.html"><span class="material-symbols-outlined">arrow_back_ios</span><p>HT</p></a>
+
+                        <div>
+                            <a id="portfolioNav" href="cases.html">Cases</a>
+                            <a id="aboutNav" href="about.html">About me</a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/HollosT?tab=repositories" target="_blank">Github</a>
+                            <a class="contact-btn" href="mailto:hollos.tamas@ravensoft.hu">Contact me</a>
+                        </div>
                     </nav>
                     <div class="article-container">
                         <article class="article-box article-box--1" data-article="1">
