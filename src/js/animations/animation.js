@@ -124,18 +124,19 @@ const animation = async function () {
             let xy = true
             
             // Giving a random period of time for each icon and for its interval --> to calculate a new distance
-             duration = calcDuration() * 1000;
-
+            duration = calcDuration() * 1000;
+            
+            
             // Getting the starting position for each icons
             childPos = icons[count].getBoundingClientRect()
 
-            icon.style.transitionDuration = `${duration}ms`
-            
-    
+
+           icon.style.transitionDuration = `${duration}ms`
             
             // After each icons transformation expired it will be called again --> giving new distance with new duration
             const iconInt = setInterval(function () {
                 if(!isMouseover) {
+                    
                     duration = calcDuration() * 1000
                     calcDistancFromTop(xy)
                         .then(data => {
@@ -159,7 +160,7 @@ const animation = async function () {
 
 // Generating a random number between 1 and 10 --> set the duration for the animation
 const calcDuration = function () {
-        return Math.floor(Math.random() * 10) + 3;
+        return Math.floor(Math.random() * 5) + 2;
 }
 
 // Generating a random distance between the height of the parent container and the half of it --> set the route for the icons
