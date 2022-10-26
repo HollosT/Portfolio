@@ -160,7 +160,7 @@ const animation = async function () {
 
 // Generating a random number between 1 and 10 --> set the duration for the animation
 const calcDuration = function () {
-        return Math.floor(Math.random() * 5) + 2;
+        return Math.floor(Math.random() * 6) + 3;
 }
 
 // Generating a random distance between the height of the parent container and the half of it --> set the route for the icons
