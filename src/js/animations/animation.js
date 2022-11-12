@@ -12,6 +12,7 @@ const navbar = document.querySelector('.navbar')
 const titleIntroductionContainer = document.querySelector('.title-introduction_container');
 const ctaScroll = document.querySelector('.cta-scroll')
 const ctaPara = document.querySelector('.cta-scroll-p')
+const scrollDownContainer = document.querySelector('.hero-down__arrow-container')
 
 
 // Main container
@@ -59,6 +60,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
             if (window.pageYOffset > startingYOffset) {
                 startingYOffset = window.pageYOffset;
 
+                scrollDownContainer.classList.add('hide')
                 ctaScroll.classList.remove('hide')
                 ctaPara.innerHTML = 'just a little bit more...'
 
