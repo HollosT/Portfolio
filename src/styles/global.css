@@ -218,8 +218,22 @@ footer {
 	fill: var(--black);
 	transition: d 1.5s;
 }
-.activeNav{
-    border-bottom: 1px solid var(--secondary-suplementar);
+
+.activeNav {
+    pointer-events: none;
+    color: var(--white);
+}
+
+.activeNav[data-nav="true"]::before{
+        display: block;
+        content: '';
+        background: var(--blockgreen);
+        width: 100%;
+        height: 120%;
+        position: absolute;
+        z-index: -1;
+        scale: 1.5;
+        transform: skew(25deg);
 }
 
 .mobile-navbar,

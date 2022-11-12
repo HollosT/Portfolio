@@ -48,26 +48,28 @@ window.addEventListener('DOMContentLoaded', (e) => {
         // Keeping track how far is the left side of the body
         if (!ocXPos === 0 || ocXPos > 0) {
 
-            if( halfCurOcXPos >= ocXPos) {
-                ctaScroll.classList.remove('hide')
-                ctaPara.innerHTML = 'just a little bit more...'
-                
-                
-            } else {
+            if( halfCurOcXPos <= ocXPos) {
                 ctaScroll.classList.add('hide')
-
-            }
+                
+                
+                
+            } 
     
             //Scrolling down --> increasing the width of the div
             if (window.pageYOffset > startingYOffset) {
                 startingYOffset = window.pageYOffset;
+
+                ctaScroll.classList.remove('hide')
+                ctaPara.innerHTML = 'just a little bit more...'
+
+
                if(halfCurOcXPos / 2 >= ocXPos) {
                 ctaPara.innerHTML = 'Almost there...'
                } 
 
 
-                overlayContainer.style.width = Number.parseFloat(getComputedStyle(overlayContainer).width, 10) + 15 + 'px';
-                overlayContainer.style.height = Number.parseFloat(getComputedStyle(overlayContainer).height, 10) + 25 + 'px';
+                overlayContainer.style.width = Number.parseFloat(getComputedStyle(overlayContainer).width, 10) + 30 + 'px';
+                overlayContainer.style.height = Number.parseFloat(getComputedStyle(overlayContainer).height, 10) + 5 + 'px';
                 
            
             }
@@ -77,15 +79,14 @@ window.addEventListener('DOMContentLoaded', (e) => {
                 // If the very top of the page is reached --> cannot scroll up more --> restarting the position of the div
                 if (window.pageYOffset === 0) {
                     
-                    
                     overlayContainer.style.width = '5vw';
                     overlayContainer.style.height = '110vh';
                     startingYOffset = 0;
                 }
                 startingYOffset = window.pageYOffset;
                 ctaPara.innerHTML = 'we were so close...'
-                overlayContainer.style.width = Number.parseFloat(getComputedStyle(overlayContainer).width, 10) - 15 + 'px';
-                overlayContainer.style.height = Number.parseFloat(getComputedStyle(overlayContainer).height, 10) - 25 + 'px';
+                overlayContainer.style.width = Number.parseFloat(getComputedStyle(overlayContainer).width, 10) - 30 + 'px';
+                overlayContainer.style.height = Number.parseFloat(getComputedStyle(overlayContainer).height, 10) - 5 + 'px';
             }
     
     
