@@ -181,10 +181,25 @@ i {
     height: 100vh;
 }
 
+.navbar-container {
+}
+
 .sticky {
+  width: 100vw;
   position: fixed;
-  background-color: var(--primarly);
-  box-shadow: 0 2px 2px var(--black);
+  box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 5px;
+  background-color: var(--white);
+  z-index: 999;
+  animation: transition 500ms ease-in-out forwards;
+}
+
+@keyframes transition {
+    from {
+        transform: translateY(-2vw);
+    } to {
+        transform: translateY(0vw);
+
+    }
 }
 
 
@@ -211,12 +226,12 @@ footer {
 #fillerSVG{
     position: relative;
 	width: 100%;
-	height: 150%;
+	height: 200%;
 }
 
 #filler{
 	fill: var(--black);
-	transition: d 1.5s;
+	transition: d 2s;
 }
 
 .activeNav {

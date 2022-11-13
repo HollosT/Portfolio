@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="src/styles/desktop.css">
     <link rel="stylesheet" href="src/styles/global.css">
-    <script src="./src/js/animations/backNavigation.js" defer></script>
+    <script src="./src/js/animations/navAnimation.js" defer></script>
     <script src="./src/js/animations/upArrow.js" defer></script>
     <script defer type="module" src="src/js/animations/hamburgerMenu.js"></script>
     <script src="./src/js/animations/aboutAnimation.js" defer></script>
@@ -37,23 +37,26 @@
             </a> 
 
         </nav>
-        <nav id="nav" class="navbar navbar-cases">
-            <a  id="backArrow" href="index.html?preview"><span class="material-symbols-outlined dekstop-back-arrow">arrow_back_ios</span> <p>HT</p></a>
-            <div>
-                <a id="portfolioNav" href="cases.html" data-nav="true" >Cases</a>
-                <a id="aboutNav" href="#" class="activeNav" data-nav="true">About me</a>
-            </div>
-            <div>
-                <a class="contact-btn" href="mailto:hollos.tamas@ravensoft.hu">Contact me</a>
-            </div>
-        </nav>
+        <div class="navbar-container">
+            <nav id="nav" class="navbar navbar-cases">
+                <a  id="backArrow" href="index.html?preview"><span class="material-symbols-outlined dekstop-back-arrow">arrow_back_ios</span> <p>HT</p></a>
+                <div>
+                    <a id="portfolioNav" href="cases.html" data-nav="true" >Cases</a>
+                    <a id="aboutNav" href="#" data-nav="true" class="activeNav">About me</a>
+                </div>
+                <div>
+                    <a class="contact-btn" href="mailto:hollos.tamas@ravensoft.hu">Contact me</a>
+                </div>
+            </nav>
+
+        </div>
         
       
     </header>
         
     <main class="main-about" >
     
-        <section class="about-introduction  center">
+        <section class="about-introduction center cases-hero">
             <h1>Words about me</h1>
             <h2>and what I like to do...</h2>
         </section>

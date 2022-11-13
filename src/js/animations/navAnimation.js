@@ -5,6 +5,10 @@ const animateSVGsection = document.querySelector('#fillerSVG');
 const aboutNav = document.querySelector('#aboutNav');
 const portfolioNav = document.querySelector('#portfolioNav');
 const svgContainer = document.querySelector('.animateSVGsection')
+const navBar = document.querySelector('.navbar-cases')
+const navContainer = document.querySelector('.navbar-container')
+const header = document.querySelector('#header')
+const hero = document.querySelector('.cases-hero')
 
 if(backArrow) {
     backArrow.addEventListener('click', (e) => {
@@ -43,3 +47,25 @@ const transitonNav = function(location) {
     }
 }
 
+
+
+// Sticky navigation
+// Observing the header
+const navHeight = navBar.getBoundingClientRect().height;
+
+
+const stickyNav = function (entries) {
+    const [entry] = entries;
+    // console.log(entry);
+  
+    if (!entry.isIntersecting) navContainer.classList.add('sticky');
+    else navContainer.classList.remove('sticky')
+  };
+  
+  const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+  });
+  
+  headerObserver.observe(hero);

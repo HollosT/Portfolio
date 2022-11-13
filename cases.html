@@ -18,7 +18,7 @@
     <script defer  src="src/js/animations/bgAnimation.js" ></script>
     <script defer  src="src/js/animations/upArrow.js" ></script>
     <script defer  src="src/js/animations/hamburgerMenu.js" ></script>
-    <script defer  src="src/js/animations/backNavigation.js" ></script>
+    <script defer  src="src/js/animations/navAnimation.js" ></script>
     <title>Tamás Hollós | UX & UI and Front-end developer</title>
 </head>
 
@@ -44,16 +44,19 @@
             </a> 
 
         </nav>
-        <nav id="nav" class="navbar navbar-cases">
-            <a  id="backArrow" href="index.html?preview"><span class="material-symbols-outlined dekstop-back-arrow">arrow_back_ios</span> <p>HT</p></a>
-            <div>
-                <a id="portfolioNav" href="cases.html" data-nav="true" class="activeNav">Cases</a>
-                <a id="aboutNav" href="#" data-nav="true">About me</a>
-            </div>
-            <div>
-                <a class="contact-btn" href="mailto:hollos.tamas@ravensoft.hu">Contact me</a>
-            </div>
-        </nav>
+        <div class="navbar-container">
+            <nav id="nav" class="navbar navbar-cases">
+                <a  id="backArrow" href="index.html?preview"><span class="material-symbols-outlined dekstop-back-arrow">arrow_back_ios</span> <p>HT</p></a>
+                <div>
+                    <a id="portfolioNav" href="cases.html" data-nav="true" class="activeNav">Cases</a>
+                    <a id="aboutNav" href="#" data-nav="true">About me</a>
+                </div>
+                <div>
+                    <a class="contact-btn" href="mailto:hollos.tamas@ravensoft.hu">Contact me</a>
+                </div>
+            </nav>
+
+        </div>
         
     </header>
     <main>

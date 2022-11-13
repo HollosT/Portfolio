@@ -237,7 +237,7 @@ articleContainer.addEventListener('click',  (e) => {
         const reParentElLeft = parentEl.getBoundingClientRect().left
         const reParentElTop = parentEl.getBoundingClientRect().top
 
-        parentEl.style.zIndex = '100'
+        parentEl.style.zIndex = '999'
  
         articleBox.forEach((article,count) => {
             const curElLeft = article.getBoundingClientRect().left
