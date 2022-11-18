@@ -1290,6 +1290,7 @@ nav a:hover::before {
     transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
 }
 .img-container:hover:after {
+
     transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
 }
 
@@ -1320,34 +1321,57 @@ nav a:hover::before {
     opacity: 1;
 }
 
-
-
-/* About sport section */
-
-.about-section--sport {
-    background-color: transparent;
+/* Skills */
+.about-article-skills {
+    height: 40vw;
+    
 }
-
-.about-article--sport {
-    background-color: var(--lightgreen);
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .5vw;
     position: relative;
-    padding-bottom: 5vw;
+    justify-items: center;
 }
 
-
-
-.about-article--sport>* {
-    color: var(--primarly);
+.skill-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--yellow);
+    padding: 2%;
+    height: 20vw;
+    transition: all 1s;
 }
 
-.about-article--sport>.about-img-container>* {
-    color: var(--primarly);
+.active-skill {
+    display: flex;
+    background: red;
+    scale: 1;
+    z-index: 100;
+    transition: all 1s;
 }
+
+.almost-active-skill {
+    display: flex;
+    scale: .5;
+    transition: all 1s;
+
+}
+
+.rest-skill {
+    display: none;
+    transition: all 1s;
+
+}
+
 
 /* Up arrow */
 
 .up-container-about {
-    background-color: var(--lightgreen);
+    background-color: var(--primarly);
     padding-bottom: 5vw;
 }
 

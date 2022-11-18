@@ -26,6 +26,8 @@ class Case extends View {
            return markup;
     }
 
+    
+
 }
 
 export default new Case()
