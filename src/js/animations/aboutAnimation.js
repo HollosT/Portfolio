@@ -113,20 +113,20 @@ const goToSkill = function (skillArr, slide) {
  // Next slide
  const nextSkill = function () {
 
-    console.log(eventMax);
     eventMax++
     eventMin++
 
-  
+    
     // if(max === maxSkill) {
-    //     max = 0
-    // } else {
-        max++
-        active++
-        min++
-    // }
-
-    adjustCurSkillArr(min, active, max)
+        //     max = 0
+        // } else {
+            max++
+            active++
+            min++
+            // }
+            
+            adjustCurSkillArr(min, active, max)
+            addHandler()
 
   };
 
@@ -134,22 +134,32 @@ const goToSkill = function (skillArr, slide) {
 
     eventMax--
     eventMin--
-    
-    max--
-    active--
-    min--
 
-    adjustCurSkillArr(min, active, max)
+    
+    // if(max === maxSkill) {
+        //     max = 0
+        // } else {
+            max--
+            active--
+            min--
+            // }
+            
+            adjustCurSkillArr(min, active, max)
+            addHandler()
+
   };
+  const addHandler = function() {
+        console.log(eventMax);
+        console.log(curSkillArr);
+      curSkillArr[eventMax].addEventListener('click', nextSkill)
+      curSkillArr[eventMin].addEventListener('click', prevSkill)
+  
+  }
 
   const init = function () {
     // goToSkill(0);
     adjustCurSkillArr(min, active, max)
-    
+    addHandler()
   };
   init();
 
-
-
-  curSkillArr[eventMax].addEventListener('click', nextSkill)
-  curSkillArr[eventMin].addEventListener('click', prevSkill)
