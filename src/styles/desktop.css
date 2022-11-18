@@ -1358,13 +1358,14 @@ nav a:hover::before {
     display: flex;
     scale: .5;
     transition: all 1s;
+    z-index: 99;
 
 }
 
 .rest-skill {
     display: none;
     transition: all 1s;
-
+    z-index: -1;
 }
 
 
