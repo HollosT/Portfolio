@@ -106,18 +106,18 @@ const goToSkill = function (skillArr, slide) {
         skill.style.transform = `translateX(${200 * (i - slide)}%)`
     })
 }
-const addSkillHandler = function() {
-    curSkillArr[eventMax].addEventListener('click', nextSkill)
-    curSkillArr[eventMin].addEventListener('click', prevSkill)
-}
+
+   
+
 
  // Next slide
  const nextSkill = function () {
 
-
+    console.log(eventMax);
     eventMax++
     eventMin++
-    addSkillHandler()
+
+  
     // if(max === maxSkill) {
     //     max = 0
     // } else {
@@ -145,10 +145,11 @@ const addSkillHandler = function() {
   const init = function () {
     // goToSkill(0);
     adjustCurSkillArr(min, active, max)
-    addSkillHandler()
+    
   };
   init();
 
 
 
-  
+  curSkillArr[eventMax].addEventListener('click', nextSkill)
+  curSkillArr[eventMin].addEventListener('click', prevSkill)
