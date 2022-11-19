@@ -1343,7 +1343,7 @@ nav a:hover::before {
     background-color: var(--yellow);
     padding: 2%;
     height: 20vw;
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .active-skill {
@@ -1351,22 +1351,18 @@ nav a:hover::before {
     background: red;
     scale: 1;
     z-index: 100;
-    transition: all 1s;
+    /* transition: all 2s; */
 }
 
 .almost-active-skill {
     display: flex;
     scale: .5;
-    transition: all 1s;
+    /* transition: all 2s; */
     z-index: 99;
 
 }
 
-.rest-skill {
-    display: none;
-    transition: all 1s;
-    z-index: -1;
-}
+
 
 
 /* Up arrow */

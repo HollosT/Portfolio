@@ -54,122 +54,58 @@ allSectios.forEach(function(section) {
 
 // Skills slider
 
-let curSkill = 0;
-const maxSkill = skills.length;
-let curSkillArr = []
-let cur;
-let min;
-let max;
 
+const currSkills = [...skills]
 
-
-
-
-const adjustCurSkillArr = function (active) {
-     max =  active + 1
-     min = active - 1
-     cur =  active
-
-
-    // console.log('min:', min, 'active:', cur, 'max:', max );
-
+const preparSkills = function() {
     resetSkills()
-   skills.forEach(s => {
-        s.classList.remove('rest-skill')
-        s.classList.add('almost-active-skill')
 
-    })
-
-    if(max > maxSkill - 1) {
-        max = 0;
-    };
-
-    curSkillArr.push(skills[min])
-    curSkillArr.push(skills[cur])
-    curSkillArr.push(skills[max])
-
-   goToSkill( 1)
-}
-
-const resetSkills = function () {
-    curSkillArr = [];
-    skills.forEach(s => {
-        s.style.transform = `translateX(0%)`
-        s.classList.remove('almost-active-skill')
-        s.classList.remove('active-skill')
-        s.classList.add('rest-skill')
-
-        s.removeEventListener('click', nextSkill)
-        s.removeEventListener('click', prevSkill)
-
-   })
-}
-
-
-
-const goToSkill = function (slide) {
-    curSkillArr.forEach((skill, i) => {
-        if(slide === i) {
+    currSkills.forEach((skill, i) => {
+        if(1 === i) {
             skill.classList.remove('almost-active-skill')
             skill.classList.add('active-skill')
-
-            
         }
-        skill.style.transform = `translateX(${200 * (i - slide)}%)`
+        skill.style.transform = `translateX(${100 * (i - 1)}%)`
+    });
+}
+
+const resetSkills = function() {
+    currSkills.forEach(s => {
+        s.removeEventListener('mouseenter', nextSkill)
+        s.removeEventListener('mouseenter', prevSkill)
+
+        s.style.transform = `translateX(0%)`
+
+        s.classList.contains('almost-active-skill') ? '' : s.classList.add('almost-active-skill')
+        s.classList.contains('active-skill') ? s.classList.remove('active-skill') : ''
     })
 }
 
+const nextSkill = function() {
 
+    currSkills.push(currSkills.shift())
 
- // Next slide
- const nextSkill = function () {
-
-    cur++
-     
-     adjustCurSkillArr(cur)
-     
-   
-
+    preparSkills()
     addHandler()
-
-  };
-
-  const prevSkill = function () {
-    // if(min === 0) {
-    //     min = 4
-    // } 
-    // if(max === 0) {
-    //         active = 4
-    // } 
-
-    // if(active === 0) {
-    //         min = 4
-    // } 
     
-    // else {
-    //     min++
-    //     active++
-    //     max++
-    // }
+}
 
-adjustCurSkillArr( cur)
+const prevSkill = function() {
+    currSkills.unshift(currSkills.pop())
+
+    preparSkills()
+    addHandler()
+}
+
+const addHandler = function() {
+    currSkills[2].addEventListener('mouseenter', nextSkill)
+    currSkills[0].addEventListener('mouseenter', prevSkill)
+}
 
 
+const init = function() {
+    preparSkills()
+    addHandler()
+}
 
-addHandler()
-
-  };
-  const addHandler = function() {
-
-        curSkillArr[2].addEventListener('click', nextSkill)
-        curSkillArr[0].addEventListener('click', prevSkill)
-    }
-    
-    const init = function () {
-
-        adjustCurSkillArr(1)
-        addHandler()
-    };
-    init();
-    
-    
+init()

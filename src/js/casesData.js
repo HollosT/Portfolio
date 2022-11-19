@@ -129,12 +129,11 @@ const caseCollection = [
                     "body": "We followed the RESTful standards in our path naming also. For the desired methods (GET, POST, PUT, PATCH, DELETE) we retrieved the applicable data, validated it with JOI, and parsed into JSON to be ready to exchange it."
                     },
                  ],
-                "image": [
+                "image": 
                     {
                     "image_src": "tp-index.png",
                     "image_alt": "Index.js file for the Task portal"
-                    }
-                ],
+                    },
             },
             {
              "content_data": 4,
