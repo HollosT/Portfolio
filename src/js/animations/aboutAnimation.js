@@ -14,7 +14,6 @@ const waveDownPathShadow = document.querySelector('#breakShadowSVGpath2')
 const skillContainer = document.querySelector('.skills-container')
 const skills = document.querySelectorAll('.skill-container')
 
-
 const waveDown = document.querySelector('#aboutBreakSVG2')
 
 
@@ -58,18 +57,22 @@ allSectios.forEach(function(section) {
 const currSkills = [...skills]
 
 const preparSkills = function() {
+
     resetSkills()
 
     currSkills.forEach((skill, i) => {
         if(1 === i) {
+
             skill.classList.remove('almost-active-skill')
             skill.classList.add('active-skill')
         }
-        skill.style.transform = `translateX(${100 * (i - 1)}%)`
+        skill.style.transform = `translateX(${150 * (i - 1)}%)`
     });
 }
 
 const resetSkills = function() {
+
+
     currSkills.forEach(s => {
         s.removeEventListener('mouseenter', nextSkill)
         s.removeEventListener('mouseenter', prevSkill)
@@ -79,6 +82,7 @@ const resetSkills = function() {
         s.classList.contains('almost-active-skill') ? '' : s.classList.add('almost-active-skill')
         s.classList.contains('active-skill') ? s.classList.remove('active-skill') : ''
     })
+
 }
 
 const nextSkill = function() {

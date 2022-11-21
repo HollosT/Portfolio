@@ -20,7 +20,7 @@ const caseCollection = [
                     "list_iconClass": "fa-solid fa-code"
                 },
                 {
-                    "list_item": "Own Database",
+                    "list_item": "MSSQL",
                     "list_iconClass": "fa-solid fa-database"
                 },
             ],

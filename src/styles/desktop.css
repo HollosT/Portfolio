@@ -1097,6 +1097,7 @@ nav a:hover::before {
     position: relative;
     z-index: 105;
     height: max-content;
+   
 }
 
 .main-about .about-introduction {
@@ -1122,6 +1123,7 @@ nav a:hover::before {
     position: relative;
     padding-top: 8vw;
     transition: transform 1s, opacity 1s;
+    
 }
 
 
@@ -1130,7 +1132,10 @@ nav a:hover::before {
     padding: 3vw;
     position: relative;
     background-color: var(--lightgreen);
+    height: 20vw;
+    display: flex;
 }
+
 
 .about-article {
     width: 100%;
@@ -1323,8 +1328,14 @@ nav a:hover::before {
 
 /* Skills */
 .about-article-skills {
-    height: 40vw;
-    
+    background: var(--black);
+}
+.about-article-skills--intro > div {
+    background: var(--black);
+}
+.about-article-skills {
+    height: 35vw;
+    background: var(--black);
 }
 .skills-container {
     display: grid;
@@ -1340,27 +1351,82 @@ nav a:hover::before {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: var(--yellow);
     padding: 2%;
-    height: 20vw;
-    transition: all 2s;
+    width: 30vw;
+    height: 25vw;
+    transition: all 2.5s;
+    scale: .4;
+    z-index: 0;
+    gap: 3vw;
+
+}
+
+.skill-container div > * {
+    color: var(--primarly);
+}
+.skill-container h4 {
+    color: var(--white);
+}
+
+.skill-container > .skill-paragraph {
+    text-align: left;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
 }
 
 .active-skill {
     display: flex;
-    background: red;
     scale: 1;
     z-index: 100;
-    /* transition: all 2s; */
+} 
+.active-skill > h4 {
+    color: white;
+    transition: all 500ms ease-in-out;
+} 
+
+
+.active-skill::before {
+    transition: all 2s ease-in;
+    content: "";
+    inset: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 25px;
+    background: var(--darkestgreen);
+    filter: blur(.05vw);
+} 
+
+.active-skill > .skill-paragraph {
+    opacity: 1;
+
+} 
+
+.almost-active-skill > h4 {
+    border-radius: 15px;
+    background: var(--darkestgreen);
+    opacity: .2;
+    padding: 15%;
+    filter: blur(.05vw);
+    animation: pulse 5s ease-in-out infinite;
 }
 
-.almost-active-skill {
-    display: flex;
-    scale: .5;
-    /* transition: all 2s; */
-    z-index: 99;
+@keyframes pulse {
+    0%, 100% {
+        scale: 1;
+        /* color: var(--darkgrey); */
 
+    }
+
+    50% {
+        scale: 1.05;
+        /* color: var(--primarly); */
+    }
 }
+
 
 
 
@@ -1368,7 +1434,7 @@ nav a:hover::before {
 /* Up arrow */
 
 .up-container-about {
-    background-color: var(--primarly);
+    background-color: var(--black);
     padding-bottom: 5vw;
 }
 
@@ -1380,8 +1446,17 @@ nav a:hover::before {
 
 }
 
+.up-container-about>div>p {
+    color: var(--primarly);
+}
+.up-container-about .material-symbols-outlined {
+    scale: 5;
+    color: var(--primarly);
+    cursor: pointer;
+}
 
-.up-container .material-symbols-outlined {
+
+.up-container-cases .material-symbols-outlined {
     scale: 5;
     color: var(--black);
     cursor: pointer;
@@ -1431,11 +1506,12 @@ nav a:hover::before {
 
 }
 
-.up-container>div>p {
+.up-container-cases>div>p {
     color: var(--black);
 }
 
 .footer-about {
+    background: black;
     position: relative;
     z-index: 110;
 }
