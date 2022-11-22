@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
                 scrollDownContainer.classList.add('hide')
                 ctaScroll.classList.remove('hide')
-                ctaPara.innerHTML = 'just a little bit more...'
+                ctaPara.innerHTML = 'just a little more...'
 
 
                if(halfCurOcXPos / 2 >= ocXPos) {
