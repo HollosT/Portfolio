@@ -71,8 +71,10 @@ class CasePreview extends View {
         const arrow = document.querySelector(`#arrow--${btnNumber}`)
         const arrow2 = document.querySelector(`#arrow2--${btnNumber}`)
         const svgContainer = document.querySelectorAll('.svgcontainer')
-       const list = document.querySelector(`.list--${btnNumber}`)
-       const mobileArrow = document.querySelector(`#cases-container-close--mobile-${btnNumber}`)
+        const list = document.querySelector(`.list--${btnNumber}`)
+        const mobileArrow = document.querySelector(`#cases-container-close--mobile-${btnNumber}`)
+        const arrowParagraph = document.querySelector(`.arrow-paragraph--${btnNumber}`)
+
         const mobileCheck = window.innerWidth;
 
             svgContainer.forEach(svg => svg.style.setProperty('--svgContainerZ', '5'))
@@ -121,6 +123,7 @@ class CasePreview extends View {
                
                 arrow.classList.remove('hide')
                 arrow2.classList.remove('hide')
+                arrowParagraph.classList.remove('hide')
                 
                 svgContainer.forEach(svg => svg.style.setProperty('--svgContainerZ', '1'))
              
@@ -151,6 +154,8 @@ class CasePreview extends View {
         const svgContainer = document.querySelectorAll('.svgcontainer')
        const list = document.querySelector(`.list--${btnNumber}`)
        const mobileArrow = document.querySelector(`#cases-container-close--mobile-${btnNumber}`)
+       const arrowParagraph = document.querySelector(`.arrow-paragraph--${btnNumber}`)
+
        const mobileCheck = window.innerWidth;
 
      
@@ -164,6 +169,7 @@ class CasePreview extends View {
             // Hiding arrow
             arrow.classList.add('hide')
             arrow2.classList.add('hide')
+            arrowParagraph.classList.add('hide')
             
             
             // starting point of the svg
@@ -241,6 +247,7 @@ class CasePreview extends View {
 
                     <path id="arrow--${this._data.case_box}" class="arrow hide" data-arrow="${this._data.preview_btn.data_btn}"
                     d="M563.6,393.9c0.3-0.2,6.2-4.5,6.4-4.6c0.1-0.1,3-2.1,3-2.2c0.1,0,2.5-1.8,2.5-1.8c0,0,1.4-1,1.5-1c0,0,1.4-1,1.4-1 c0,0,1.3-0.9,1.3-0.9c0.7-0.5,1.4-1,2.1-1.5c0.5-0.4,1-0.7,1.5-1.1c0.6-0.5,1.3-0.9,1.9-1.4c0,0,2.7-2,2.8-2c0,0,7.6-5.4,7.6-5.4 c0.1-0.1,0.2-0.3,0.2-0.4c0-0.2-0.1-0.3-0.3-0.4l-36.5-15.2c-0.3-0.1-0.7,0.1-0.6,0.5l4.4,38.2C562.9,394,563.3,394.1,563.6,393.9z" />
+                    <p class="arrow-paragraph arrow-paragraph--${this._data.preview_btn.data_btn} hide">See less</p>
                     </svg>
                     <div id="cases-container-close--mobile-${this._data.case_box}" class="mobile-arrow cases-container-close--mobile hide" data-mobile="${this._data.preview_btn.data_btn}"> 
                         <p>See less </p>
