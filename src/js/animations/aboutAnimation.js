@@ -52,8 +52,6 @@ allSectios.forEach(function(section) {
 
 
 // Skills slider
-
-
 const currSkills = [...skills]
 
 const preparSkills = function() {
@@ -61,10 +59,14 @@ const preparSkills = function() {
     resetSkills()
 
     currSkills.forEach((skill, i) => {
+        skill.classList.remove('active-skill');
+        skill.classList.remove('final-active');
         if(1 === i) {
-
-            skill.classList.remove('almost-active-skill')
             skill.classList.add('active-skill')
+
+            setTimeout(() => {
+                skill.classList.add('final-active')
+            }, 1000)
         }
         skill.style.transform = `translateX(${150 * (i - 1)}%)`
     });
@@ -79,7 +81,6 @@ const resetSkills = function() {
 
         s.style.transform = `translateX(0%)`
 
-        s.classList.contains('almost-active-skill') ? '' : s.classList.add('almost-active-skill')
         s.classList.contains('active-skill') ? s.classList.remove('active-skill') : ''
     })
 

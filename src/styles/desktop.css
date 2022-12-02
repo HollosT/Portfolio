@@ -1343,95 +1343,83 @@ nav a:hover::before {
     background: var(--black);
 }
 .about-article-skills {
-    height: 35vw;
+    height: 30vw;
     background: var(--black);
 }
 .skills-container {
+    margin-top: 5vw;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: .5vw;
     position: relative;
     justify-items: center;
 }
 
 .skill-container {
+    align-self: center;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    padding: 2%;
+    padding: 3%;
     width: 30vw;
     height: 25vw;
-    transition: all 2.5s;
     scale: .4;
     z-index: 0;
     gap: 3vw;
-
+    text-align: left;
+    transition: all 2s ease;
+    height: 0vw;
+    border-radius: 5px;
+    opacity: .8;
 }
 
-.skill-container div > * {
-    color: var(--primarly);
-}
 .skill-container h4 {
-    color: var(--white);
+    position: absolute;
+    color: var(--mildgrey);
 }
+.skill-container p {
+    color: var(--primarly);
+    margin-bottom: 1vw;
+}
+
 
 .skill-container > .skill-paragraph {
+    position: absolute;
     text-align: left;
-    display: none;
     opacity: 0;
+
 }
 
 .active-skill {
+    background: var(--darkestgreen);
+    transition: all 2s ease;
     display: flex;
     scale: 1;
     z-index: 100;
-} 
-.active-skill > h4 {
-    color: white;
-
-} 
-
-
-.active-skill::before {
-    transition: all 2s ease-in;
-    content: "";
-    inset: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-radius: 25px;
-    background: var(--darkestgreen);
-    filter: blur(.05vw);
-} 
-
-.active-skill > .skill-paragraph {
-    display: flex;
+    height: 20vw;
     flex-direction: column;
     gap: 1vw;
     opacity: 1;
 } 
+.active-skill h4 {
+    color: var(--white);
+} 
 
-.almost-active-skill > h4 {
-    border-radius: 15px;
-    opacity: .2;
-    background: var(--darkestgreen);
-    padding: 15%;
-    filter: blur(.05vw);
+
+
+.final-active > h4  {
+  
+    position: relative;
+
+}
+.final-active > .skill-paragraph  {
+    /* display: block; */
+    opacity: 1;
+    position: relative;
+
 }
 
-
-@keyframes pulse {
-    0%, 100% {
-        scale: .4;
-    }
-
-    50% {
-        scale: .45;
-    }
-}
 
 
 
