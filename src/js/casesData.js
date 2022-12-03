@@ -28,6 +28,10 @@ const caseCollection = [
             {
                 "link_name": "Front-end solution",
                 "link": "https://github.com/HollosT/living-togeter"
+            },
+            {
+                "link_name": "Live demo",
+                "link": "https://mmd.ucn.dk/class/MDE-CSD-S21/10407745/living-together/#/buildings"
             }
         ],
         "preview_btn": {
