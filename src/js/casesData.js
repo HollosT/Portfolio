@@ -1,9 +1,214 @@
 
 const caseCollection = [
+     // Living Together
+    // Living Together Preview
+    {   "preview": {
+        "case_box": 1,
+        "preview_title": "Living Together",
+        "preview_images": [
+            {
+                "img_src": "lg-home.png",
+                "img_alt": "Living Together welcome screen",
+                "img_class": "case-img-desktop"
+
+            },
+            
+        ],
+        "preview_list": [
+            {
+                "list_item": "Front-end development",
+                "list_iconClass": "fa-solid fa-code"
+            },
+            {
+                "list_item": "Vue, Vuex, Firebase",
+                "list_iconClass": "article-icons fa-brands fa-vuejs"
+            },
+        ],
+        "preview_links": [
+            {
+                "link_name": "Front-end solution",
+                "link": "https://github.com/HollosT/living-togeter"
+            }
+        ],
+        "preview_btn": {
+            "btn_text": "Read more",
+            "data_btn": 1
+        }
+        },
+        // Living together Collections
+        "case_title": "Living Together",
+        "tabs": [
+            {
+                "tab_content": "Challenge",
+                "tab_data": 1
+            },
+            {
+                "tab_content": "Vue.js",
+                "tab_data": 2
+            },
+            {
+                "tab_content": "Vuex",
+                "tab_data": 3
+            },
+            {
+                "tab_content": "Login & Signup",
+                "tab_data": 4
+            },
+            {
+                "tab_content": "Community",
+                "tab_data": 5
+            },
+            {
+                "tab_content": "Conclusion",
+                "tab_data": 6
+            },
+           
+        ],
+
+        // Living Together content collection
+        "content": [
+            {
+             "content_data": 1,
+             "texts": [
+                    {
+                    "subTitle": "Problem",
+                    "body": "When I moved to Denmark, I moved into a block of a house where we have a lot of small apartments next to each other. However, it was rather complicated and hard to pass information to each other. We use fliers, and paper notes on the board."
+                    },
+                    {
+                    "subTitle": "Solution",
+                    "body": "Creating a web application where the users can join or register their living community. They can post information and react to those with comments, likes, and dislikes."
+                    },
+                    {
+                    "subTitle": "My role in the team",
+                    "body": "Individual project, developer"
+                    },
+                 ],
+             "image": {
+                    "image_src": "lg-community.png",
+                    "image_alt": "Living Together, Norrensudby community group"
+                },
+            },
+            {
+             "content_data": 2,
+                "texts": [
+                    {
+                    "subTitle": "",
+                    "body": "For this project I was using Vue3 and the Composition API."
+                    },
+                    {
+                    "subTitle": "Routing",
+                    "body": "To mimic multiple pages on this web application and to keep all the benefits of having SPA, fewer requests to the server, optimised rendering, and responsiveness. I used Vue routing. With the usage of routing, I was able to protect my pages which require authentication and without a Token, it cannot be entered."
+                    },
+                    {
+                    "subTitle": "Hooks",
+                    "body": "To not overwhelm the components I outsourced the more complicated logic to reusable hooks. In this way, it can be used in multiple components app-wide."
+                    },
+                    {
+                    "subTitle": "Compostion API",
+                    "body": "I used the Composition API for this project because it enables me to write logic more flexibly."
+                    },
+                 ],
+                "image": {
+                    "image_src": "lg-routing.png",
+                    "image_alt": "Living Together - Router file"
+                },
+            },
+            {
+             "content_data": 3,
+                "texts": [
+                    {
+                    "subTitle": "",
+                    "body": "Since this application handles a lot of side-wide data I used Vuex for store management. However, Pinia could have been a better choice, it is newer and very compatible with the Composition API."
+                    },
+                    {
+                    "subTitle": "Store",
+                    "body": "To handle multiple blocks of data for different purposes divided my store into modules according to their goals, authentication, buildings-, profile-, post-, and resident-related. And combining those in the root index store."
+                    },
+                    {
+                    "subTitle": "The actions",
+                    "body": "Because, I had to make a lot of API calls with the backend, Firebase, actions were extremely important. With them, I was able to handle asyncronous methods which I wouldn't be able to tackle."
+                    }
+                 ],
+                "image": {
+                    "image_src": "lg-vuex.png",
+                    "image_alt": "Showcasing the strcuture of the Store - action"
+                },
+            },
+            {
+             "content_data": 4,
+                "texts": [
+                    {
+                    "subTitle": "Authentication",
+                    "body": "To handle authentication, login, and registering, I have used the service Firebase. Firebase provides a token that can be used as an identifier for keeping the user logged in and allow them to enter pages."
+                    },
+                    {
+                    "subTitle": "Signup",
+                    "body": "It was my design choice that email and password are enough to sign up. However, I needed extra information about the user for their profile, names, address, and picture. To tackle that, I divided the data from the registration form. And I supplied the applicable Firebase tables with the data that belongs there."
+                    },
+                    {
+                    "subTitle": "",
+                    "body": "The data is prepared for sending to the database asynchronously. Also, to supply the store which distributes the data app-wide, preparing the response of the API call to be ready to pass it to the store."
+                    }
+
+                    
+                 ],
+                "image": {
+                    "image_src": "lg-signup.png",
+                    "image_alt": "Signup form in Living Together"
+                },
+            },
+            {
+             "content_data": 5,
+                "texts": [
+                    {
+                    "subTitle": "Posts",
+                    "body": "After you joined to a community you have the chance to share your thoughts. The posts just can be seen only on the community page."
+                    },
+                    {
+                    "subTitle": "Likes and Dislikes",
+                    "body": "Implementing the reaction functionality was challenging. Since I had to check whether the user already liked the post or not and perform API calls based on that. If they haven't liked it before the like post request can be performed. If they already liked it and still click on the like button that means that the like needs to be removed from the database."
+                    },
+                    {
+                    "subTitle": "Comments",
+                    "body": "Once, you commented with the help of the computed method of Vue, I can already fetch the post's comment and display it on the front-end solution. It was tricky to display the applicable date. If it happened today, you will see the current data with time. Otherwise, it is gradually changing to 1 day, 2 days ago..."
+                    },
+                 ],
+                "image": {
+                    "image_src": "lg-comment.png",
+                    "image_alt": "An example of a post and comments."
+                },
+            },
+            {
+             "content_data": 6,
+                "texts": [
+                    {
+                    "subTitle": "Error handling",
+                    "body": "You can never have enough error handling...However, I could have done more than what I have now. I only check the posts and the comments so the users cannot post an empty post or comment. It would be nice to check the address whether is there a community at that address or not. Also, prevent applying to any community. "
+                    },
+                    {
+                    "subTitle": "Further features",
+                    "body": "Interacting with the community members, sending messages, check their profiles, would be an exciting feature to implement. Also, the ability to react to comments."
+                    },
+                    {
+                    "subTitle": "",
+                    "body": "This is my first bigger web application. And, I enjoyed that I was responsible to come up with the structure, design choices, logic, how an issue can be solved. I still have a lot of things to do in the app, but I am looking forward to doing that."
+                    }
+
+                 ],
+                "image": {
+                    "image_src": "lg-menu.png",
+                    "image_alt": "Opened menu on Living Together"
+                },
+            }
+        ]
+      
+    },
+    
     // Task portal data
     // Task portal preview
-    {   "preview": {
-            "case_box": 1,
+    {   
+        "preview": {
+            "case_box": 2,
             "preview_title": "Task portal",
             "preview_images": [
                 {
@@ -36,7 +241,7 @@ const caseCollection = [
             ],
             "preview_btn": {
                 "btn_text": "Read more",
-                "data_btn": 1
+                "data_btn": 2
             }
         },
 
@@ -198,187 +403,7 @@ const caseCollection = [
     },
 
     /* *************************************** */
-    // NASA APOD data
-    // NASA APOD preview
-    {   "preview": {
-            "case_box": 2,
-            "preview_title": "NASA APOD",
-            "preview_images": [
-                {
-                    "img_src": "apod-home.png",
-                    "img_alt": "NASA APOD landing page",
-                    "img_class": "case-img case-img-desktop"
-
-                },
-                {
-                    "img_src": "apod-home2.png",
-                    "img_alt": "NASA APOD today's APOD",
-                    "img_class": "case-img case-img-desktop-2"
-
-                },
-            ],
-            "preview_links": [
-                {
-                    "link_name": "Front-end solution",
-                    "link": "https://github.com/HollosT/Nasa-APOD"
-                },
-                {
-                    "link_name": "Live demo",
-                    "link": "https://mmd.ucn.dk/class/MDE-CSD-S21/10407745/nasa-apod/#/"
-                },  
-            ],
-            "preview_list": [
-                {
-                    "list_item": "Single-page app",
-                    "list_iconClass": "fa-sharp fa-solid fa-desktop"
-                },
-                {
-                    "list_item": "Vue Composition API",
-                    "list_iconClass": "fa-brands fa-vuejs"
-                },
-            ],
-            "preview_btn": {
-                "btn_text": "Read more",
-                "data_btn": 2
-            }
-        },
-        // NASA APOD collection
-        "case_title": "NASA APOD",
-        "tabs": [
-            {
-                "tab_content": "Challenge",
-                "tab_data": 1
-            },
-            {
-                "tab_content": "Structure",
-                "tab_data": 2
-            },
-            {
-                "tab_content": "Composition API",
-                "tab_data": 3
-            },
-            {
-                "tab_content": "Functionality",
-                "tab_data": 4
-            },
-            {
-                "tab_content": "Conclusion",
-                "tab_data": 5
-            },
-           
-        ],
-
-        // NASA APOD content collection
-        "content": [
-            {
-             "content_data": 1,
-             "texts": [
-                    {
-                    "subTitle": "Problem",
-                    "body": "NASA offers a great resource for pictures taken from outer space. I decided to implement a little web application where people, can see today's or month's APOD. Or they can set the desired range of time from they want to see images."
-                    },
-                    {
-                    "subTitle": "Solution",
-                    "body": "Creating a web application with Vue3 and focusing on the usage of Composition API."
-                    },
-                    {
-                    "subTitle": "My role in the team",
-                    "body": "Individual project"
-                    },
-                 ],
-             "image": {
-                    "image_src": "apod-today.png",
-                    "image_alt": "NASA APOD today, detailed version"
-                },
-            },
-            {
-             "content_data": 2,
-                "texts": [
-                    {
-                    "subTitle": "",
-                    "body": "I tried to follow the official design guide provided by Vue!"
-                    },
-                    {
-                    "subTitle": "File structure",
-                    "body": "My App.vue file acts as the root element which mounts the HTML page. For the stand-alone pages, I used the views folder. For the building components, I created the components folder."
-                    },
-                    {
-                    "subTitle": "",
-                    "body": "For reoccurring elements, I created a UI folder and a layouts folder. To be reusable with the JavaScript functions I created a composable folder."
-                    },
-                    {
-                    "subTitle": "Naming convention",
-                    "body": "For the UI files, I used the Base prefix. For the layouts files, I used the prefix. And overall, I was trying to be descriptive with the name of the files."
-                    },
-                 ],
-                "image": {
-                    "image_src": "apod-structure.png",
-                    "image_alt": "NASA APOD file structure"
-                },
-            },
-            {
-             "content_data": 3,
-                "texts": [
-                    {
-                    "subTitle": "",
-                    "body": "To experiment with the new setup, I decided to only use Composition API instead of Options API."
-                    },
-                    {
-                    "subTitle": "",
-                    "body": "Composition API can help to be clean and efficient with the logic, and separate composable functions into reusable blocks."
-                    },
-                    {
-                    "subTitle": "The usage",
-                    "body": "WIth the usage of Composition API I have used refs, route, router also some of the lifecycle Hooks. And I could use also props, emitting or binding. "
-                    }
-                 ],
-                "image": {
-                    "image_src": "apod-comp.png",
-                    "image_alt": "Example of the usage of Composition API in code"
-                },
-            },
-            {
-             "content_data": 4,
-                "texts": [
-                    {
-                    "subTitle": "Retrieve current month's or today's APOD",
-                    "body": "The web app automatically takes the current month's first day and the current day and fetches for each applicable APOD."
-                    },
-                    {
-                    "subTitle": "Select specific period of time",
-                    "body": "The user can set in a little form from what period they want to retrieve APODs. For the logic, I used reusable JavaScript composable."
-                    },
-                    {
-                    "subTitle": "Error handling",
-                    "body": "I deiced to do a little bit of error prevention with the Composition API. The app inspects whether the selected dates are not in the future or the end date is not sooner than the start date."
-                    }
-                    
-                 ],
-                "image": {
-                    "image_src": "apod-select.png",
-                    "image_alt": "NASA APOD Selecting a period of time"
-                },
-            },
-            {
-             "content_data": 5,
-                "texts": [
-                    {
-                    "subTitle": "",
-                    "body": "This small project is my first fully implemented front-end solution by Vue. It is simple and a little bit lumpy, but I managed to make the interface follow the interactions. I was able to use the Vue router as well."
-                    },
-                    {
-                    "subTitle": "Pitfalls",
-                    "body": "There is a lot to polish on the project. The structure and the usage of components are not always coherent. Also, the data flow between the views and components could be better. The usage of the Composition API is still very primitive. Also, I did not do more styling besides the bare minimum."
-                    }
-                 ],
-                "image": {
-                    "image_src": "apod-home.png",
-                    "image_alt": "NASA this month APOD"
-                },
-            }
-        ]
-      
-    },
+   
     /* *************************************** */
     // Kulia data
     // Kulia preview
