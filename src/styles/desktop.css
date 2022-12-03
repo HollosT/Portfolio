@@ -342,15 +342,6 @@ nav a:hover::before {
 
 }
 
-.circle-2 {
-    bottom: 0%;
-    left: 0%;
-    background-color: var(--darkyellow);
-    border-top-right-radius: 100%;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 0%;
-    border-bottom-left-radius: 10px;
-}
 
 .circle-4 {
     width: 6vw;
@@ -447,11 +438,23 @@ nav a:hover::before {
 
 .article-container .article-box--2 {
     background-color: transparent;
+    border-radius: 0;
     grid-column: 3 / 4;
     grid-row: 2 / span 1;
     justify-self: center;
     justify-content: center;
+}
 
+.article-container .article-box--2 > .circle-2 {
+    background: var(--darkestyellow);
+    left: 40%;
+    bottom: 25%;
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+.article-container .article-box--2 > p {
+    margin: 0;
 }
 
 
@@ -473,13 +476,15 @@ nav a:hover::before {
     }
 
     .article-container .article-box--2 {
-        grid-column: 1 / 2;
-        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        align-self: start;
+
     }
 
     .article-container .article-box--3 {
         grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
+        grid-row: 2 / span 1;
         justify-self: center;
     }
 }
@@ -1156,90 +1161,7 @@ nav a:hover::before {
     z-index: 2;
 }
 
-/* SVG waves -ABout */
-.about-article .first-break-svg {
-    position: absolute;
-    top: -4%;
-    fill: var(--lightgreen);
-    transform: rotate(180deg);
-    z-index: 2;
 
-}
-
-#aboutBreakSVG1Shadow {
-    position: absolute;
-    top: -7%;
-    fill: var(--darkgrey);
-    opacity: .5;
-    z-index: 0;
-
-}
-
-#aboutBreakSVG2 {
-    position: absolute;
-    top: 23%;
-    z-index: 2;
-    fill: var(--lightgreen)
-}
-
-
-#aboutBreakShadowSVG2 {
-    position: absolute;
-    top: 24%;
-    z-index: 1;
-
-}
-
-.svg-shadow {
-    position: absolute;
-    fill: var(--darkgrey);
-    opacity: .5;
-    filter: blur(.5vw);
-}
-
-.svg-3 {
-    transform: rotate(180deg);
-}
-
-#aboutBreakSVG3 {
-    position: absolute;
-    top: -8%;
-    fill: var(--lightgreen);
-
-}
-
-#aboutBreakShadowSVG3 {
-    position: absolute;
-    top: -13%;
-}
-
-/* Smaller devices */
-@media (max-width: 750px) {
-    .about-article .first-break-svg {
-        top: -2%;
-    
-    }
-    
-    #aboutBreakSVG1Shadow {
-        top: -3.5%;
-    }
- 
-    #aboutBreakSVG2 {
-        top: 13%;
-    }
-    
-    #aboutBreakShadowSVG2 {
-        top: 13.5%;
-    }
- 
-    #aboutBreakSVG3 {
-        top: -2%;
-    }
-    
-    #aboutBreakShadowSVG3 {
-        top: -4%;
-    }
-}
 
 /* About nature section */
 .about-article--nature {
@@ -1253,6 +1175,7 @@ nav a:hover::before {
         background-color: var(--primarly);
         padding: 20vw 0 20vw;
     }
+
 }
 
 
@@ -1336,8 +1259,26 @@ nav a:hover::before {
 }
 
 /* Skills */
+.about-article-skills--intro {
+    display: block;
+}
+
+
 .about-article-skills {
     background: var(--black);
+    display: block;
+}
+
+/* Smaller devices */
+@media (max-width: 750px) {
+    .about-article-skills {
+
+        display: none;
+    }
+    .about-article-skills--intro {
+        display: none;
+    }
+
 }
 .about-article-skills--intro > div {
     background: var(--black);
@@ -1421,15 +1362,19 @@ nav a:hover::before {
 }
 
 
-
-
-
-
 /* Up arrow */
 
 .up-container-about {
     background-color: var(--black);
     padding-bottom: 5vw;
+}
+
+/* Smaller devices */
+@media (max-width: 750px) {
+    .up-container-about {
+        background-color: var(--primarly);
+    }
+
 }
 
 .up-container>div {
@@ -1447,6 +1392,16 @@ nav a:hover::before {
     scale: 5;
     color: var(--primarly);
     cursor: pointer;
+}
+/* Smaller devices */
+@media (max-width: 750px) {
+    .up-container-about>div>p {
+        color: var(--black);
+    }
+    .up-container-about .material-symbols-outlined {
+        color: var(--black);
+    }
+
 }
 
 

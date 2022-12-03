@@ -159,7 +159,7 @@ i {
 }
 
 .center {
-    width: max-content;
+    width: 80%;
     margin: auto;
 }
 .btn {
