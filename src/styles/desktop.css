@@ -1140,7 +1140,15 @@ nav a:hover::before {
     
 }
 
+.nature-title {
+    display: block;
+}
+@media (max-width: 750px) {
+    .nature-title {
+        display: none;
+    }
 
+}
 
 .about-story-title {
     padding: 3vw;
